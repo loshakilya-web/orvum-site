@@ -1,0 +1,20 @@
+---
+interface Props { current?: string }
+const { current } = Astro.props;
+const links = [
+  { href: '/platform', label: 'Platform' },
+  { href: '/about', label: 'About' },
+];
+---
+<header class="pnav" id="pnav" data-state="shown">
+  <div class="pnav-in">
+    <a class="pnav-brand" href="/" aria-label="ORVUM home"><img src="/site/brand/favicon.svg" alt="" width="28" height="28"><span>ORVUM</span></a>
+    <button type="button" class="pnav-toggle" aria-expanded="false" aria-controls="pnav-links">Menu</button>
+    <nav id="pnav-links" class="pnav-links" aria-label="Main">
+      <a href="/" aria-current={current === '/' ? 'page' : undefined}>Home</a>
+      {links.map((l) => <a href={l.href} aria-current={current === l.href ? 'true' : undefined}>{l.label}</a>)}
+      <a class="pnav-cta" href="/contact" aria-current={current === '/contact' ? 'true' : undefined}>Contact</a>
+    </nav>
+  </div>
+</header>
+<script is:inline src="/js/nav.js" defer></script>

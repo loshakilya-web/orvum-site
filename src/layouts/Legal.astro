@@ -1,0 +1,8 @@
+---
+import Base from './Base.astro';
+interface Props { title: string; description: string; canonical: string; body: string }
+const { title, description, canonical, body } = Astro.props;
+---
+<Base title={title} description={description} canonical={canonical} robots="index, follow" css={['/site/css/legal.css']}>
+<Fragment set:html={body.replace('</main>', '<nav class="fine" aria-label="Site"><a href="/">Home</a> · <a href="/platform">Platform</a> · <a href="/about">About</a> · <a href="/contact">Contact</a> · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></nav>\n</main>')} />
+</Base>

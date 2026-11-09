@@ -1,0 +1,17 @@
+# ORVUM
+
+> ORVUM is an AI-native retail operating system in development: one intelligence layer intended to connect buying, purchase orders, receiving, inventory, POS/mPOS, sales, returns, clienteling, finance, analytics and owner decision support. The initial focus is premium and luxury multi-brand retail. ORVUM is based in Cyprus. Its founder, Ilya Loshak, has a background in premium multi-brand retail.
+
+Status: in development. Prototypes and product designs shown on the website are illustrative and are not released functionality. ORVUM does not publish customer, revenue or ROI figures.
+
+## Pages
+
+- [Home](https://www.orvum.com/): what ORVUM is and the modules it is designed to connect
+- [Platform](https://www.orvum.com/platform): scope, design principles and development status
+- [About](https://www.orvum.com/about): the company and its founder
+- [Contact](https://www.orvum.com/contact): how to reach ORVUM
+
+## Optional
+
+- [Privacy](https://www.orvum.com/privacy)
+- [LinkedIn](https://www.linkedin.com/company/orvum/)

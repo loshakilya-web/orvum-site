@@ -1,0 +1,26 @@
+{
+  "name": "ORVUM — The AI-Native Retail Operating System",
+  "short_name": "ORVUM",
+  "description": "The Intelligence Core for Retail.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0E0F10",
+  "theme_color": "#0E0F10",
+  "icons": [
+    {
+      "src": "/site/brand/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/site/brand/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/site/brand/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+/* 01 decision card — one concrete ORVUM recommendation */
+.dcard { background: #121110; color: var(--ink); border-radius: 18px; padding: 26px 28px 22px; margin: 0 0 24px; box-shadow: 0 30px 60px -34px rgba(0, 0, 0, .5); }
+.dcard-h { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-family: var(--mono); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--signal); }
+.dcard-own { color: var(--ink-3); }
+.dcard-t { margin: 14px 0 22px; max-width: 60ch; font-size: clamp(20px, 1.9vw, 26px); line-height: 1.3; font-weight: 600; letter-spacing: -.012em; }
+.dcard-g { display: grid; grid-template-columns: 1.1fr 1fr; gap: 30px; }
+.dk { margin: 0 0 6px; font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+.dev, .dalt { list-style: none; margin: 0 0 16px; padding: 0; }
+.dev li, .dalt li { padding: 9px 0; border-top: 1px solid var(--line-d); font-size: 15px; line-height: 1.45; color: var(--ink-2); }
+.dev b { display: block; margin-bottom: 2px; font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--signal); }
+.dalt b { display: block; color: var(--ink); font-weight: 650; }
+.dcons { margin: 0; }
+.dcons div { display: grid; grid-template-columns: 118px 1fr; gap: 12px; padding: 8px 0; border-top: 1px solid var(--line-d); }
+.dcons dt { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); padding-top: 2px; }
+.dcons dd { margin: 0; font-size: 14.5px; line-height: 1.45; color: var(--ink-2); }
+.dcard-f { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line-d); }
+.dbtn { display: inline-flex; align-items: center; min-height: 34px; padding: 0 14px; border-radius: 7px; font-size: 13px; font-weight: 650; background: var(--signal); color: #1a0a04; }
+.dbtn.o { background: transparent; color: var(--ink); border: 1px solid rgba(255, 255, 255, .22); }
+.dcard-f small { flex: 1 1 280px; margin-left: 8px; font-size: 12.5px; line-height: 1.45; color: var(--ink-3); }
+.dwhy { margin: 0 0 40px; max-width: 72ch; font-size: 17px; color: var(--char-2); }
+.dwhy strong { color: var(--char); }
+.flow-h { margin: 0 0 14px; font-size: 20px; }
+
+/* 02 problem on dark */
+.dark .pcard { background: #0d0c0b; border-color: var(--line-d); }
+.dark .pcard p { color: var(--ink-2); }
+.dark .pcard .pcard-k { color: var(--signal); }
+
+/* 03 platform on light */
+.light .chain { border-color: var(--line-l); background: #fff; }
+.light .chain-k { color: var(--char-3); }
+.light .chain-ai { background: rgba(252, 86, 9, .06); border-color: rgba(178, 58, 0, .35); color: var(--char); }
+.light .chain-ai .chain-k { color: var(--signal-ink); }
+.light .chain-flow li { background: var(--paper); border-color: var(--line-l); }
+.light .chain-flow .d { color: var(--char-2); }
+.light .chain-shared { border-color: var(--line-l); background: var(--paper); }
+.light .chain-shared li { background: #fff; border: 1px solid var(--line-l); }
+.light .chain-foot { color: var(--char-2); } .light .chain-foot strong { color: var(--char); }
+.light .status { color: var(--char-2); }
+
+@media (max-width: 1080px) { .dcard-g { grid-template-columns: 1fr; gap: 6px; } }
+@media (max-width: 760px) {
+  .dcard { padding: 20px 18px 18px; border-radius: 14px; }
+  .dcons div { grid-template-columns: 1fr; gap: 2px; }
+  .dcard-f small { margin-left: 0; }
+}

@@ -1,0 +1,123 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../site.mjs';
+const url = `${SITE}/platform`;
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: 'The ORVUM Platform',
+      inLanguage: 'en',
+      isPartOf: { '@id': `${SITE}/#website` },
+      about: { '@id': `${url}#software` },
+      breadcrumb: {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Platform', item: url },
+        ],
+      },
+    },
+    {
+      '@type': 'SoftwareApplication',
+      '@id': `${url}#software`,
+      name: 'ORVUM',
+      applicationCategory: 'BusinessApplication',
+      applicationSubCategory: 'Retail operating system',
+      operatingSystem: 'Web',
+      creativeWorkStatus: 'In development',
+      description: 'AI-native retail operating system in development, designed to connect buying, purchase orders, receiving, inventory, POS/mPOS, sales, returns, clienteling, finance, analytics and owner decision support.',
+      publisher: { '@id': `${SITE}/#organization` },
+    },
+  ],
+};
+const modules = [
+  ['Buying and purchase orders', 'Seasonal buying plans, open-to-buy, brand orders and purchase orders in one flow.'],
+  ['Receiving and inventory', 'Receiving against purchase orders, stock by location, availability and allocation.'],
+  ['Stores, POS and mobile POS', 'Sales, returns and staff performance at the counter and on the floor.'],
+  ['Clienteling', 'Client profiles, preferences and outreach, connected to real stock.'],
+  ['Pricing and markdowns', 'Price strategy, markdown decisions and their effect on margin.'],
+  ['Finance and analytics', 'P&L, cash flow, profitability, sell-through and demand, built from the same transactions.'],
+  ['AI agents and owner decision support', 'Agents that plan, monitor and propose; the owner approves.'],
+];
+const principles = [
+  ['One product master.', 'Every product has one canonical identity across buying, stock, sales and finance.'],
+  ['Source-backed numbers.', 'Every figure traces back to the transactions it came from.'],
+  ['Explicit missing data.', 'When data is missing, ORVUM says so instead of guessing.'],
+  ['Clear ownership of transactions.', 'Each domain — buying, receiving, sales, finance — owns its own records.'],
+  ['Roles, permissions and audit.', 'Who can see and change what is enforced, and changes are recorded.'],
+  ['Approval gates.', 'AI proposes; people approve consequential actions.'],
+];
+---
+<Base
+  title="ORVUM Platform — Retail Buying, Inventory, POS & Finance"
+  description="How ORVUM is designed: one product master, source-backed numbers and owner approvals across buying, inventory, POS, clienteling and finance. In development."
+  canonical={url}
+  ogTitle="The ORVUM Platform"
+  ogDescription="One intelligence layer across the retail business, designed for premium and luxury multi-brand retail. In development."
+  jsonld={jsonld}
+  css={['/site/v5/orvum-public.css', '/site/v5/orvum-public-2.css', '/site/css/pages.css']}
+>
+<a class="skip" href="#main">Skip to content</a>
+<Nav current="/platform" />
+<main id="main">
+<section class="sec dark page-top" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="eyebrow"><span>Platform</span> In development</p>
+    <h1 id="h1">The ORVUM platform</h1>
+    <p class="lead">ORVUM is an AI-native retail operating system in development, designed for premium and luxury multi-brand retail. This page explains what it is designed to do, the principles behind it, and where development stands.</p>
+  </div>
+</section>
+
+<section class="sec light" aria-labelledby="problem-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>01</span> The problem</p>
+    <h2 id="problem-h">The problem: retail runs on disconnected systems</h2>
+    <div class="prose"><p>In a typical multi-brand boutique, buying lives in spreadsheets and brand order forms, stock lives in the POS, client knowledge lives in sales associates' phones, and finance lives in accounting software. Owners reconcile these by hand, and decisions about what to buy, mark down or reorder are made on numbers that disagree with each other.</p></div>
+  </div>
+</section>
+
+<section class="sec light" aria-labelledby="connect-h" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow"><span>02</span> Scope</p>
+    <h2 id="connect-h">What ORVUM is designed to connect</h2>
+    <ul class="mods">
+      {modules.map(([t, d]) => <li><h3>{t}</h3><p>{d}</p></li>)}
+    </ul>
+  </div>
+</section>
+
+<section class="sec dark" aria-labelledby="principles-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>03</span> Principles</p>
+    <h2 id="principles-h">Design principles</h2>
+    <ul class="princ">
+      {principles.map(([t, d]) => <li><strong>{t}</strong>{d}</li>)}
+    </ul>
+  </div>
+</section>
+
+<section class="sec light" aria-labelledby="who-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>04</span> Who it is for</p>
+    <h2 id="who-h">Who it is for</h2>
+    <div class="prose"><p>Premium and luxury multi-brand retailers first: independent boutiques, multi-store groups and shop-in-shop operators that buy seasonally from many brands. Retail more broadly later.</p></div>
+  </div>
+</section>
+
+<section class="sec dark" aria-labelledby="status-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>05</span> Status</p>
+    <h2 id="status-h">Development status</h2>
+    <p class="status"><span class="dot" aria-hidden="true"></span>ORVUM is in development. Prototypes and designs are not released functionality, and the demo on this website uses synthetic data. We will publish what is released, when it is released.</p>
+    <p class="contact-go" style="margin-top:32px"><a class="pbtn primary" href="/contact">Contact ORVUM →</a></p>
+  </div>
+</section>
+</main>
+<Footer />
+</Base>

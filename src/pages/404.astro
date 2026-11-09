@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../site.mjs';
+---
+<Base title="Page not found · ORVUM" description="This page does not exist on the ORVUM website." canonical={`${SITE}/`} robots="noindex, nofollow" analytics={false}
+  css={['/site/v5/orvum-public.css', '/site/v5/orvum-public-2.css', '/site/css/pages.css']}>
+<Nav />
+<main id="main">
+<section class="sec dark page-top" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="eyebrow"><span>404</span></p>
+    <h1 id="h1">Page not found</h1>
+    <p class="lead">This page does not exist. The pages below will take you where you need to go.</p>
+    <p class="contact-go"><a class="pbtn primary" href="/">Home</a><a class="pbtn" href="/platform">Platform</a><a class="pbtn" href="/about">About</a><a class="pbtn" href="/contact">Contact</a></p>
+  </div>
+</section>
+</main>
+<Footer />
+</Base>

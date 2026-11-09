@@ -1,0 +1,14 @@
+{
+  "name": "orvum-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build && node scripts/postbuild.mjs",
+    "preview": "astro preview",
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": {
+    "astro": "5.18.2"
+  }
+}

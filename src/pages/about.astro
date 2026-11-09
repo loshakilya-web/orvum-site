@@ -1,0 +1,82 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { SITE, FOUNDER_LINKEDIN } from '../site.mjs';
+const url = `${SITE}/about`;
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'AboutPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: 'About ORVUM',
+      inLanguage: 'en',
+      isPartOf: { '@id': `${SITE}/#website` },
+      about: { '@id': `${SITE}/#organization` },
+      mainEntity: { '@id': `${SITE}/#founder` },
+    },
+    {
+      '@type': 'Person',
+      '@id': `${SITE}/#founder`,
+      name: 'Ilya Loshak',
+      jobTitle: 'Founder',
+      worksFor: { '@id': `${SITE}/#organization` },
+      sameAs: [FOUNDER_LINKEDIN],
+    },
+  ],
+};
+---
+<Base
+  title="About ORVUM — Founded by a Retail Operator in Cyprus"
+  description="About ORVUM: an AI-native retail operating system in development, founded in Cyprus by Ilya Loshak, a premium multi-brand retail operator."
+  canonical={url}
+  ogTitle="About ORVUM"
+  ogDescription="Founded in Cyprus by a premium multi-brand retail operator."
+  jsonld={jsonld}
+  css={['/site/v5/orvum-public.css', '/site/v5/orvum-public-2.css', '/site/css/pages.css']}
+>
+<a class="skip" href="#main">Skip to content</a>
+<Nav current="/about" />
+<main id="main">
+<section class="sec dark page-top" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="eyebrow"><span>About</span> Cyprus</p>
+    <h1 id="h1">About ORVUM</h1>
+    <p class="lead">ORVUM is an AI-native retail operating system in development, based in Cyprus and founded by Ilya Loshak.</p>
+  </div>
+</section>
+
+<section class="sec light" aria-labelledby="why-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>01</span> Why</p>
+    <h2 id="why-h">Why we are building ORVUM</h2>
+    <div class="prose"><p>Running a luxury multi-brand business means making expensive decisions every season — what to buy from which brand, how deep, when to reorder, when to mark down — while the information needed for those decisions sits in separate systems. ORVUM starts from that operating reality: one system where buying, stock, sales, clients and money tell the same story.</p></div>
+  </div>
+</section>
+
+<section class="sec dark" aria-labelledby="how-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>02</span> How</p>
+    <h2 id="how-h">How we build</h2>
+    <div class="prose"><p>We separate what is designed, what is built and what is released, and we only describe released functionality as available.</p></div>
+  </div>
+</section>
+
+<section class="sec light" aria-labelledby="founder-h">
+  <div class="wrap founder">
+    <div>
+      <p class="eyebrow"><span>03</span> Founder</p>
+      <h2 id="founder-h">Founder</h2>
+    </div>
+    <div class="founder-t">
+      <p><strong>Ilya Loshak</strong> — Founder of ORVUM. Background: owner of First Boutique and Millya Group, a premium multi-brand retail business in Cyprus.</p>
+      <p><a href={FOUNDER_LINKEDIN} target="_blank" rel="noopener noreferrer">LinkedIn ↗</a></p>
+      <p class="contact-go" style="margin-top:24px"><a class="pbtn primary" href="/contact">Contact ORVUM →</a></p>
+    </div>
+  </div>
+</section>
+</main>
+<Footer />
+</Base>

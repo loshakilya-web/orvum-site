@@ -1,0 +1,12 @@
+---
+import Legal from '../layouts/Legal.astro';
+import { SITE, PRIVACY_NOTICE_DATE } from '../site.mjs';
+import raw from '../legal/privacy-body.html?raw';
+const body = raw.replace('__NOTICE_DATE__', PRIVACY_NOTICE_DATE);
+---
+<Legal
+  title="Privacy · ORVUM"
+  description="How the ORVUM website and its private demo handle personal data: one necessary sign-in cookie and cookie-free visit statistics."
+  canonical={`${SITE}/privacy`}
+  body={body}
+/>

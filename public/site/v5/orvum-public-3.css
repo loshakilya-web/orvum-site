@@ -1,0 +1,8 @@
+/* ORVUM public page — fixes from the front-end review of 8 Nov 2026.
+   Demo decision card: Approve / Adjust / Reject are a preview. They can be reached by keyboard, look unavailable,
+   and say why when pressed. */
+.dcard-f button.dbtn { font-family: inherit; border: 0; cursor: not-allowed; opacity: .55; }
+.dcard-f button.dbtn.o { border: 1px solid rgba(255, 255, 255, .22); }
+.dcard-f button.dbtn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; opacity: .8; }
+.dcard-f .dmsg { flex: 1 1 100%; margin: 2px 0 0; font-size: 13px; line-height: 1.45; color: #ffb48a; }
+.dcard-f .dmsg:empty { display: none; }

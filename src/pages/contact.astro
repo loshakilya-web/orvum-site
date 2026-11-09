@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import { SITE, EMAIL, LINKEDIN } from '../site.mjs';
+const url = `${SITE}/contact`;
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  '@id': `${url}#webpage`,
+  url,
+  name: 'Contact ORVUM',
+  inLanguage: 'en',
+  isPartOf: { '@id': `${SITE}/#website` },
+  about: { '@id': `${SITE}/#organization` },
+};
+---
+<Base
+  title="Contact ORVUM"
+  description="Contact ORVUM about the AI-native retail operating system for premium and luxury multi-brand retail: partnerships, early conversations and press."
+  canonical={url}
+  robots="index, follow"
+  jsonld={jsonld}
+  css={['/site/v5/orvum-public.css', '/site/v5/orvum-public-2.css', '/site/css/pages.css']}
+>
+<a class="skip" href="#main">Skip to content</a>
+<Nav current="/contact" />
+<main id="main">
+<section class="sec dark page-top" aria-labelledby="h1">
+  <div class="wrap">
+    <p class="eyebrow"><span>Contact</span></p>
+    <h1 id="h1">Contact ORVUM</h1>
+    <p class="lead">ORVUM is an AI-native retail operating system in development for premium and luxury multi-brand retail. We welcome conversations with retailers, brand partners and press.</p>
+  </div>
+</section>
+<section class="sec light contact" aria-label="Ways to reach ORVUM">
+  <div class="wrap">
+    <ul class="facts">
+      <li><b>Email</b> <a href={`mailto:${EMAIL}`}>{EMAIL}</a></li>
+      <li><b>LinkedIn</b> <a href={LINKEDIN} target="_blank" rel="noopener noreferrer">linkedin.com/company/orvum</a></li>
+      <li><b>Based in</b> Cyprus</li>
+    </ul>
+    <p class="contact-go">
+      <a class="pbtn primary" href={`mailto:${EMAIL}`}>Write to {EMAIL}</a>
+      <a class="pbtn" href={LINKEDIN} target="_blank" rel="noopener noreferrer">Message ORVUM on LinkedIn ↗</a>
+    </p>
+  </div>
+</section>
+</main>
+<Footer />
+</Base>

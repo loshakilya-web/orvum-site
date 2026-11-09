@@ -1,0 +1,6 @@
+---
+import Legal from '../layouts/Legal.astro';
+import { SITE } from '../site.mjs';
+import body from '../legal/terms-body.html?raw';
+---
+<Legal title="Terms of use · ORVUM" description="Terms of use for the ORVUM website and its private demo." canonical={`${SITE}/terms`} body={body} />

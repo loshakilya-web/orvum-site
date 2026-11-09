@@ -1,0 +1,347 @@
+---
+import Base from '../layouts/Base.astro';
+import Footer from '../components/Footer.astro';
+import { SITE, EMAIL, LINKEDIN, INSTAGRAM } from '../site.mjs';
+const description = 'ORVUM is an AI-native retail operating system in development for luxury multi-brand retail: buying, inventory, POS, clienteling and finance in one layer.';
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${SITE}/#organization`,
+      name: 'ORVUM',
+      url: `${SITE}/`,
+      logo: { '@type': 'ImageObject', url: `${SITE}/site/brand/icon-512.png`, width: 512, height: 512 },
+      description: 'ORVUM is an AI-native retail operating system in development for premium and luxury multi-brand retail.',
+      foundingLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressCountry: 'CY' } },
+      areaServed: 'Worldwide',
+      email: EMAIL,
+      founder: { '@id': `${SITE}/#founder` },
+      sameAs: [LINKEDIN, INSTAGRAM],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE}/#website`,
+      url: `${SITE}/`,
+      name: 'ORVUM',
+      inLanguage: 'en',
+      publisher: { '@id': `${SITE}/#organization` },
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${SITE}/#webpage`,
+      url: `${SITE}/`,
+      name: 'ORVUM — AI-Native Retail Operating System for Luxury Retail',
+      description,
+      inLanguage: 'en',
+      isPartOf: { '@id': `${SITE}/#website` },
+      about: { '@id': `${SITE}/#organization` },
+    },
+  ],
+};
+---
+<Base
+  title="ORVUM — AI-Native Retail Operating System for Luxury Retail"
+  description={description}
+  canonical={`${SITE}/`}
+  robots="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+  ogTitle="ORVUM — AI-Native Retail Operating System"
+  ogDescription="One intelligence layer for buying, inventory, POS, clienteling and finance. Built for premium and luxury multi-brand retail. In development."
+  jsonld={jsonld}
+  css={['/site/v5/orvum-public.css', '/site/v5/orvum-public-2.css', '/site/v5/orvum-public-3.css']}
+>
+<a class="skip" href="#decision">Skip to content</a>
+
+<h1 class="vh">ORVUM — The Intelligence Core for Retail</h1>
+<p class="vh">ORVUM is an AI-native retail operating system in development, designed for premium and luxury multi-brand retail.</p>
+
+<!-- The first screen is the production hero; every change to it is listed in build.mjs. -->
+<div class="hero-frame" id="top">
+  <iframe id="hero" src="/hero.html" title="ORVUM — The Intelligence Core for Retail" allow="fullscreen"></iframe>
+</div>
+
+<header class="pnav" id="pnav" data-state="hidden">
+  <div class="pnav-in">
+    <a class="pnav-brand" href="#top" aria-label="ORVUM — back to top"><img src="/site/brand/favicon.svg" alt="" width="28" height="28"><span>ORVUM</span></a>
+    <button type="button" class="pnav-toggle" aria-expanded="false" aria-controls="pnav-links">Menu</button>
+    <nav id="pnav-links" class="pnav-links" aria-label="Sections">
+      <a href="#decision">Decision</a>
+      <a href="#problem">Problem</a>
+      <a href="#platform">Platform</a>
+      <a href="#explore">Explore</a>
+      <a href="#economics">Economics</a>
+      <a href="#trust">Trust</a>
+      <a href="#founder">Founder</a>
+      <a href="#questions">Questions</a>
+      <a class="pnav-cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- 01 · ONE DECISION -->
+<section class="sec light" id="decision" aria-labelledby="decision-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>01</span> One decision, made intelligently <em class="tagx">Illustrative</em></p>
+    <h2 id="decision-h">What ORVUM puts in front of an owner.</h2>
+    <p class="lead">Midway through a weak season: sell-through is below plan, stock is ageing in some stores, key sizes are missing in others, and supplier payments for the next collection are approaching. A POS sees the sales, an ERP sees the orders, a CRM sees the clients. ORVUM reads them together — and turns them into one decision.</p>
+
+    <article class="dcard" aria-label="Example ORVUM recommendation">
+      <div class="dcard-h"><span>ORVUM · Recommendation · ready for approval</span><span class="dcard-own">For the owner · this week</span></div>
+      <h3 class="dcard-t">Hold the price on the autumn knitwear for two more weeks. Move 18 pieces in sizes M–L from Store 3 to Store 7, and invite 11 clients who buy this brand.</h3>
+      <div class="dcard-g">
+        <div>
+          <p class="dk">Why — the evidence</p>
+          <ul class="dev">
+            <li><b>Sales · Inventory</b>Sell-through is 9 points below plan, and most of the unsold knitwear is in Store 3.</li>
+            <li><b>Stores &amp; POS</b>Store 7 could not serve 23 requests for sizes M–L in the last three weeks.</li>
+            <li><b>CRM</b>11 clients bought this brand in M–L last season and agreed to be contacted.</li>
+            <li><b>Finance · Purchase orders</b>The next collection’s supplier payment is due in 19 days; the plan still covers it.</li>
+          </ul>
+        </div>
+        <div>
+          <p class="dk">Alternatives ORVUM weighed</p>
+          <ul class="dalt">
+            <li><b>Mark down 30% now</b>Clears stock faster, but gives up margin on knitwear that still has demand.</li>
+            <li><b>Do nothing</b>Ageing stock grows, and a later markdown would have to be deeper.</li>
+          </ul>
+          <p class="dk">Expected consequences</p>
+          <dl class="dcons">
+            <div><dt>Gross profit</dt><dd>More knitwear sold at full price — if clients respond</dd></div>
+            <div><dt>Residual stock</dt><dd>Lower at season end</dd></div>
+            <div><dt>Cash</dt><dd>Supplier payment still covered; a small transfer cost</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="dcard-f"><button type="button" class="dbtn" aria-disabled="true" aria-describedby="dcard-note">Approve</button><button type="button" class="dbtn o" aria-disabled="true" aria-describedby="dcard-note">Adjust</button><button type="button" class="dbtn o" aria-disabled="true" aria-describedby="dcard-note">Reject</button><small id="dcard-note">After approval, store tasks are created, the decision is recorded, and the result is compared with this estimate in week 8. Preview only — nothing can be approved here.</small><p class="dmsg" role="status" aria-live="polite"></p></div>
+    </article>
+
+    <p class="dwhy"><strong>Why this is smarter than separate systems:</strong> the recommendation exists only because stock, client demand, purchase commitments and cash are read together — with the evidence behind every line and a person who approves.</p>
+
+    <h3 class="flow-h">How ORVUM reaches a decision like this</h3>
+    <div class="flow">
+      <div class="fstep">
+        <p class="fk"><span>1</span> Evidence</p>
+        <h3>What ORVUM brings together</h3>
+        <ul class="ev">
+          <li><b>Inventory &amp; sales</b> by store, size and season — which stock is ageing, and where.</li>
+          <li><b>Customer demand</b> — clients who buy this category, and the sizes they need that are missing.</li>
+          <li><b>Receiving &amp; commitments</b> — what has arrived, what Delivery Match flagged, which purchase orders are still open.</li>
+          <li><b>Cash obligations</b> — supplier payments due, set against expected sales.</li>
+        </ul>
+      </div>
+      <div class="farrow" aria-hidden="true"></div>
+      <div class="fstep">
+        <p class="fk"><span>2</span> Alternatives</p>
+        <h3>Options, prepared for review</h3>
+        <div class="opts" role="radiogroup" aria-label="Choose an option to see its consequences" id="opts">
+          <button type="button" role="radio" aria-checked="true" data-o="clients">Targeted client engagement</button>
+          <button type="button" role="radio" aria-checked="false" data-o="transfer" tabindex="-1">Transfers between stores</button>
+          <button type="button" role="radio" aria-checked="false" data-o="markdown" tabindex="-1">Markdown timing</button>
+          <button type="button" role="radio" aria-checked="false" data-o="buying" tabindex="-1">Buying adjustment</button>
+        </div>
+        <p class="ohint" id="o-what"></p>
+      </div>
+      <div class="farrow" aria-hidden="true"></div>
+      <div class="fstep">
+        <p class="fk"><span>3</span> Consequences</p>
+        <h3>Shown side by side, in their own units</h3>
+        <dl class="cons" id="cons" aria-live="polite">
+          <div><dt>Cash obligations</dt><dd data-c="cash"></dd></div>
+          <div><dt>Expected gross profit</dt><dd data-c="gp"></dd></div>
+          <div><dt>Residual stock</dt><dd data-c="stock"></dd></div>
+          <div><dt>Working capital</dt><dd data-c="wc"></dd></div>
+        </dl>
+      </div>
+      <div class="farrow" aria-hidden="true"></div>
+      <div class="fstep fstep-end">
+        <p class="fk"><span>4</span> Approval &amp; outcome</p>
+        <h3>People decide. Results are checked.</h3>
+        <ol class="appr">
+          <li><b>Human approval</b> — the responsible person approves, adjusts or rejects. Nothing runs without approval, and only within that person's permissions.</li>
+          <li><b>Execution record</b> — who approved what, when, and on which evidence.</li>
+          <li><b>Measured outcome</b> — expected and realised results are compared at the agreed checkpoint.</li>
+        </ol>
+      </div>
+    </div>
+    <p class="note">Illustrative example: stores, figures and clients are invented. It shows how ORVUM is designed to work; it does not describe a customer deployment or a measured result.</p>
+  </div>
+</section>
+
+<!-- 02 · PROBLEM -->
+<section class="sec dark" id="problem" aria-labelledby="problem-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>02</span> The problem</p>
+    <h2 id="problem-h">Retail decisions are made in one place. Their consequences land in another.</h2>
+    <p class="lead">Buying commits next season's cash months in advance. Stock ages in one store while the size a customer asks for is missing in another. Markdowns are set without seeing the supplier payments that follow. Every team sees its own part — almost no one sees the whole consequence in time to act.</p>
+    <div class="cols3">
+      <article class="pcard">
+        <p class="pcard-k">Operations</p>
+        <h3>Work runs in separate systems</h3>
+        <p>Buying, receiving, stores, pricing and the team each use their own tools and spreadsheets. A delivery problem or a missing size reaches the shop floor before it reaches the people who can fix it.</p>
+      </article>
+      <article class="pcard">
+        <p class="pcard-k">Information</p>
+        <h3>Numbers arrive late and disagree</h3>
+        <p>Sales, stock and customer data rarely match. Reports explain last month; they cannot show which store, size or client needs attention today — or which figures are incomplete.</p>
+      </article>
+      <article class="pcard">
+        <p class="pcard-k">Financial consequences</p>
+        <h3>Profit and cash are seen last</h3>
+        <p>Gross profit, ageing stock, supplier commitments and cash needs become clear only after the season has moved on, when the remaining options are fewer and more expensive.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 03 · PLATFORM -->
+<section class="sec light" id="platform" aria-labelledby="platform-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>03</span> The platform</p>
+    <h2 id="platform-h">One operating system for the whole retail chain.</h2>
+    <p class="lead">ORVUM connects the work a retailer does every day — from the first buying decision to the cash it becomes — so every function works from the same product, stock and financial truth.</p>
+
+    <div class="chain" role="group" aria-label="How ORVUM connects the retail chain">
+      <div class="chain-layer chain-ai">
+        <p class="chain-k">Approved AI recommendations</p>
+        <p>Explain what is happening · recommend options with their consequences · act only after the responsible person approves</p>
+      </div>
+      <ol class="chain-flow" aria-label="The flow of goods and money">
+        <li><span class="n">Buying</span><span class="d">Demand and buying capital</span></li>
+        <li><span class="n">Purchase orders</span><span class="d">Commitments and terms</span></li>
+        <li><span class="n">Receiving</span><span class="d">Delivery Match</span></li>
+        <li><span class="n">Stock</span><span class="d">By store, size and age</span></li>
+        <li><span class="n">Sales &amp; returns</span><span class="d">Stores and mobile POS</span></li>
+        <li><span class="n">Customers</span><span class="d">Insight and clienteling</span></li>
+      </ol>
+      <div class="chain-layer chain-shared">
+        <p class="chain-k">Shared across the chain</p>
+        <ul>
+          <li>Pricing</li><li>People</li><li>Planning</li><li>Finance</li><li>Analytics</li>
+        </ul>
+      </div>
+      <p class="chain-foot"><strong>One product identity.</strong> Every item carries one canonical record — style, colour, size, supplier, season and price — from the buying plan to the till, so each module counts the same thing.</p>
+    </div>
+
+    <p class="status"><span class="dot" aria-hidden="true"></span>ORVUM is in development. Modules are being built and validated step by step; nothing on this site describes a live customer deployment.</p>
+    <p class="contact-go"><a class="pbtn" href="/platform">How the platform is designed →</a></p>
+  </div>
+</section>
+
+<!-- 04 · EXPLORE -->
+<section class="sec dark" id="explore" aria-labelledby="explore-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>04</span> Explore</p>
+    <h2 id="explore-h">Intelligence across every retail function.</h2>
+    <p class="lead">Select a function to see what it does, the decision it improves, what it connects to and the benefit it is designed to deliver.</p>
+
+    <div class="ex" id="ex">
+      <div class="ex-list" role="tablist" aria-orientation="vertical" aria-label="Retail functions" id="ex-list"></div>
+      <div class="ex-panel" id="ex-panel" role="tabpanel" tabindex="-1" aria-live="polite"></div>
+    </div>
+    <noscript><p class="note">Turn on JavaScript to explore each function.</p></noscript>
+  </div>
+</section>
+
+<!-- 05 · RETAIL ECONOMICS -->
+<section class="sec light" id="economics" aria-labelledby="economics-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>05</span> Retail economics</p>
+    <h2 id="economics-h">Designed around the measures that decide a retail year.</h2>
+    <p class="lead">ORVUM is designed to help retailers improve five measures. Each is kept in its own unit — gross profit is not added to cash, and stock is not added to either.</p>
+    <div class="econ">
+      <article><h3>Gross profit</h3><p>Better-timed pricing and markdowns, so more of the season sells at a healthy margin.</p></article>
+      <article><h3>Sell-through</h3><p>Stock matched to demand by store and size, and client opportunities surfaced while the product is still current.</p></article>
+      <article><h3>Stock capital efficiency</h3><p>Slow and ageing stock identified early, so less capital stays locked in inventory that is not selling.</p></article>
+      <article><h3>Working-capital planning</h3><p>Purchase-order commitments, deliveries and supplier payments seen together with expected sales — before cash gets tight.</p></article>
+      <article><h3>Operational productivity</h3><p>Fewer manual reconciliations and hand-offs, with clear tasks and permissions for every role.</p></article>
+    </div>
+    <p class="note">These are design goals. ORVUM does not yet claim measured customer results.</p>
+  </div>
+</section>
+
+<!-- 06 · LIVING INTELLIGENCE -->
+<section class="sec dark" id="intelligence" aria-labelledby="intelligence-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>06</span> Living intelligence</p>
+    <h2 id="intelligence-h">An operating loop, not another report.</h2>
+    <p class="lead">ORVUM is designed to work the way a strong retail leadership team works: evidence first, decisions owned by people, outcomes checked.</p>
+    <ol class="loop">
+      <li><span class="ln">01</span><h3>Evidence</h3><p>Facts from sales, stock, receiving, customers and finance, each traced to its source. Missing data is shown as missing.</p></li>
+      <li><span class="ln">02</span><h3>Understanding</h3><p>What is changing, why, and what it means for profit, stock and cash.</p></li>
+      <li><span class="ln">03</span><h3>Alternatives</h3><p>Realistic options, each with its consequences and trade-offs.</p></li>
+      <li><span class="ln">04</span><h3>Authorised action</h3><p>The right person approves. ORVUM records and carries out only what was approved.</p></li>
+      <li><span class="ln">05</span><h3>Measured outcome</h3><p>Expected and actual results are compared. The next decision starts from what was learned.</p></li>
+    </ol>
+    <p class="loop-back" aria-hidden="true"><span>The next decision starts from the measured outcome</span></p>
+  </div>
+</section>
+
+<!-- 07 · FOUNDER -->
+<section class="sec light" id="founder" aria-labelledby="founder-h">
+  <div class="wrap founder">
+    <div>
+      <p class="eyebrow"><span>07</span> Founder</p>
+      <h2 id="founder-h">Built from running retail, for retail.</h2>
+    </div>
+    <div class="founder-t">
+      <p>ORVUM was founded by Ilya Loshak, who has spent years operating luxury fashion retail — buying collections, running stores, and answering for stock, margin and cash.</p>
+      <p>ORVUM grew out of that experience. The decisions that mattered most were the ones no single system could see whole: what to buy, where stock should be, when to change a price, and what each choice would do to cash.</p>
+      <p>It is designed for the wider retail market — independent retailers, retail groups and the brands they work with.</p>
+      <p class="sig">Ilya Loshak <span>Founder, ORVUM</span></p>
+      <p><a href="/about">Read about ORVUM →</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- 08 · TRUST -->
+<section class="sec dark" id="trust" aria-labelledby="trust-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>08</span> Trust</p>
+    <h2 id="trust-h">Control is designed in, not added later.</h2>
+    <div class="trust">
+      <article><h3>Reliable data</h3><p>Every figure traces back to its source record. When data is missing or incomplete, ORVUM says so instead of filling the gap silently.</p></article>
+      <article><h3>Role-based permissions</h3><p>Each person sees and does only what their role allows, by company and store. Each retailer's data is kept separate.</p></article>
+      <article><h3>Human approval</h3><p>Recommendations never run on their own. People approve, adjust or reject them, and stay accountable for the decision.</p></article>
+      <article><h3>Traceable outcomes</h3><p>Every decision is recorded with its evidence, approver and result, so it can be reviewed and audited later.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 09 · CONTACT -->
+<section class="sec light" id="contact" aria-labelledby="contact-h">
+  <div class="wrap contact">
+    <p class="eyebrow"><span>09</span> Contact</p>
+    <h2 id="contact-h">Let's talk about your retail business.</h2>
+    <p class="lead">We are speaking with retail operators, retail groups and brand partners who want to shape how ORVUM works in practice.</p>
+    <p class="contact-go">
+      <a class="pbtn primary" href="https://www.linkedin.com/company/orvum/" target="_blank" rel="noopener noreferrer">Message ORVUM on LinkedIn ↗</a>
+      <a class="pbtn" href="mailto:truth@orvum.com">truth@orvum.com</a>
+    </p>
+  </div>
+</section>
+
+
+<!-- 10 · QUESTIONS (Site Brief #1, page-copy approved 8 Nov 2026) -->
+<section class="sec dark" id="questions" aria-labelledby="questions-h">
+  <div class="wrap">
+    <p class="eyebrow"><span>10</span> Questions</p>
+    <h2 id="questions-h">Questions</h2>
+    <div class="trust">
+      <article><h3>What is ORVUM?</h3><p>ORVUM is an AI-native retail operating system in development. It is designed to run buying, inventory, store sales, clienteling and finance in one connected system instead of separate tools and spreadsheets.</p></article>
+      <article><h3>Who is ORVUM for?</h3><p>The initial focus is premium and luxury multi-brand retail — independent boutiques and retail groups that carry many brands. The long-term aim is retail in general.</p></article>
+      <article><h3>Is ORVUM available now?</h3><p>Not yet. ORVUM is in development and the website demo is illustrative. You can contact us to follow progress or discuss early conversations.</p></article>
+      <article><h3>What does “AI-native” mean here?</h3><p>AI is part of the core design rather than an add-on: AI agents are intended to plan, monitor and propose actions, while consequential decisions stay with people through explicit approval steps.</p></article>
+      <article><h3>Where is ORVUM based?</h3><p>Cyprus.</p></article>
+    </div>
+    <p class="note">ORVUM is in development. Modules, figures and examples shown on this website are illustrative; the demo uses synthetic data only. We do not publish customer, revenue or ROI figures because we do not have released, measured results to report.</p>
+  </div>
+</section>
+
+</main>
+<Footer />
+<script is:inline src="/site/v5/orvum-public.js" defer></script>
+<script is:inline src="/site/v5/hero-scroll.js" defer></script>
+<script is:inline src="/site/v5/orvum-public-3.js" defer></script>
+</Base>
