@@ -6,3 +6,102 @@
 .dcard-f button.dbtn:focus-visible { outline: 2px solid #fff; outline-offset: 3px; opacity: .8; }
 .dcard-f .dmsg { flex: 1 1 100%; margin: 2px 0 0; font-size: 13px; line-height: 1.45; color: #ffb48a; }
 .dcard-f .dmsg:empty { display: none; }
+
+/* Section 01 — three decisions in tabs (owner brief, 9 Nov 2026) */
+.dtabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 0 0 28px; }
+.dtab { font: inherit; text-align: left; cursor: pointer; display: grid; gap: 4px; padding: 14px 16px; border-radius: 12px; border: 1px solid var(--line-l); background: #fff; color: var(--char); }
+.dtab:hover { border-color: rgba(178, 58, 0, .45); }
+.dtab[aria-selected="true"] { background: #121110; border-color: #121110; color: var(--ink); }
+.dtab:focus-visible { outline: 2px solid var(--signal); outline-offset: 2px; }
+.dtab-k { font-family: var(--mono); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--signal-ink); }
+.dtab[aria-selected="true"] .dtab-k { color: var(--signal); }
+.dtab-n { font-size: 16px; font-weight: 650; line-height: 1.3; }
+.dpanel:focus-visible { outline: 2px solid var(--signal); outline-offset: 6px; border-radius: 12px; }
+.dpanel-k { margin: 0 0 6px; font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--char-3); }
+.dpanel-h { margin: 0 0 12px; max-width: 46ch; font-size: clamp(20px, 1.8vw, 25px); line-height: 1.3; font-weight: 600; letter-spacing: -.01em; color: var(--char); }
+.dpanel .lead { margin-bottom: 26px; }
+.dneg { margin: 6px 0 0; border-top: 1px solid var(--line-d); padding-top: 10px; }
+.dneg summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 8px; min-height: 34px; font-family: var(--mono); font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase; color: var(--signal); }
+.dneg summary::-webkit-details-marker { display: none; }
+.dneg summary::before { content: "+"; display: inline-grid; place-items: center; width: 18px; height: 18px; border: 1px solid currentColor; border-radius: 4px; font-size: 13px; line-height: 1; }
+.dneg[open] summary::before { content: "–"; }
+.dneg summary:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+.dneg dl { margin: 6px 0 0; }
+.dneg dl div { display: grid; grid-template-columns: 118px 1fr; gap: 12px; padding: 8px 0; border-top: 1px solid var(--line-d); }
+.dneg dt { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); padding-top: 2px; }
+.dneg dd { margin: 0; font-size: 14.5px; line-height: 1.45; color: var(--ink-2); }
+.dsurface { margin: 4px 0 30px; padding: 16px 20px; border-left: 3px solid var(--signal); border-radius: 0 12px 12px 0; background: rgba(18, 17, 16, .05); }
+.dsurface p { margin: 0; max-width: 78ch; font-size: 15.5px; line-height: 1.5; color: var(--char-2); }
+.dsurface strong { color: var(--char); }
+@media (max-width: 760px) {
+  .dtabs { grid-template-columns: 1fr; gap: 8px; }
+  .dtab { padding: 11px 14px; }
+  .dneg dl div { grid-template-columns: 1fr; gap: 2px; }
+}
+
+/* Section 03 — the chain grouped by role (owner brief, 9 Nov 2026) */
+.chain-start { margin: -12px 0 26px; max-width: 78ch; font-size: 16.5px; line-height: 1.5; color: var(--char-2); }
+.chain-start strong { display: block; color: var(--char); }
+.chain-k-flow { margin: 18px 2px -6px; }
+.chain-net { margin-top: 10px; }
+.chain-net .chain-net-d { margin: 0; font-size: 14.5px; color: var(--char-2); }
+
+/* Section 04 — what is shared in person */
+.ex-more { max-width: 78ch; }
+
+
+/* Section 01, shorter (owner, 12 Nov 01:27 — "too much text"): the setting is the panel heading, the recommendation is a short
+   headline with one row per action, the evidence is four figures; everything else opens on request */
+.dpanel-h { max-width: 52ch; }
+.dsteps { list-style: none; margin: 0 0 22px; padding: 0; border-top: 1px solid var(--line-d); }
+.dsteps li { display: grid; grid-template-columns: 180px 1fr; gap: 16px; align-items: baseline; padding: 11px 0; border-bottom: 1px solid var(--line-d); }
+.dsteps span { font-family: var(--mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+.dsteps strong { font-size: 17px; line-height: 1.4; font-weight: 600; color: var(--ink); }
+.dcard > .dev { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0 22px; margin: 0 0 8px; }
+.dcard > .dev li { padding: 10px 0 12px; font-size: 14px; line-height: 1.4; color: var(--ink-2); }
+.dev .dfig { display: block; margin: 3px 0 4px; font-size: 21px; line-height: 1.25; font-weight: 650; letter-spacing: -.015em; color: var(--ink); }
+.dmore { margin-top: 4px; }
+.dmore .dcard-g { margin-top: 10px; }
+.dmore .dalt li { font-size: 14.5px; }
+.dmore .dcons + .dk, .dmore .dalt + .dk { margin-top: 18px; }
+.dflow-note { margin: 4px 0 6px; font-size: 13.5px; line-height: 1.45; color: var(--ink-3); }
+.dwhy { margin: 34px 0 18px; }
+.dflow { margin: 0 0 26px; border-top: 1px solid var(--line-l); border-bottom: 1px solid var(--line-l); }
+.dflow > summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 10px; min-height: 52px; font-size: 17px; font-weight: 650; color: var(--char); }
+.dflow > summary::-webkit-details-marker { display: none; }
+.dflow > summary::before { content: "+"; display: inline-grid; place-items: center; width: 22px; height: 22px; border: 1px solid var(--signal-ink); border-radius: 5px; color: var(--signal-ink); font-size: 15px; line-height: 1; }
+.dflow[open] > summary::before { content: "–"; }
+.dflow > summary:focus-visible { outline: 2px solid var(--signal); outline-offset: 3px; }
+.dflow .flow { margin: 6px 0 22px; }
+@media (max-width: 1080px) { .dcard > .dev { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 640px) {
+  .dcard-t { margin: 12px 0 14px; font-size: 21px; }
+  .dsteps li { grid-template-columns: 1fr; gap: 3px; padding: 10px 0; }
+  .dsteps strong { font-size: 16.5px; }
+  .dcard > .dev { grid-template-columns: 1fr 1fr; gap: 0 14px; }
+  .dev .dfig { font-size: 18px; }
+  .dcard > .dev li { font-size: 13px; }
+}
+
+/* Contact: request form (owner, 9 Nov 2026). Requests go to /api/lead, which stores them and emails the team. */
+.lead-form { position: relative; display: grid; gap: 14px; max-width: 760px; margin: 6px 0 26px; }
+.lf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.lead-form label { display: grid; gap: 6px; font-size: 14px; font-weight: 600; color: var(--char-2); }
+.lead-form .opt { font-weight: 400; color: var(--char-3); }
+.lead-form input, .lead-form textarea { font: inherit; font-size: 16px; font-weight: 400; color: var(--char); background: #fff; border: 1px solid rgba(20, 19, 18, .24); border-radius: 10px; padding: 11px 13px; width: 100%; box-sizing: border-box; }
+.lead-form textarea { resize: vertical; min-height: 128px; }
+.lead-form input:focus-visible, .lead-form textarea:focus-visible { outline: 2px solid var(--signal); outline-offset: 1px; border-color: var(--signal); }
+.lead-form [aria-invalid="true"] { border-color: #b3261e; }
+.lf-hp { position: absolute !important; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.lf-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; }
+button.pbtn { font-family: inherit; cursor: pointer; }
+button.pbtn[disabled] { opacity: .6; cursor: progress; }
+.lf-note { margin: 0; font-size: 14px; color: var(--char-3); }
+.lf-note a { color: inherit; }
+.lf-status { margin: 0; font-size: 15px; color: var(--char-2); }
+.lf-status:empty { display: none; }
+.lf-status.ok { color: #1e6b3a; font-weight: 600; }
+.lf-status.err { color: #b3261e; }
+.lead-form.sent .lf-row, .lead-form.sent > label, .lead-form.sent .lf-foot { display: none; }
+.contact-alt { margin: 0 0 12px; font-size: 15px; color: var(--char-3); }
+@media (max-width: 640px) { .lf-row { grid-template-columns: 1fr; } }

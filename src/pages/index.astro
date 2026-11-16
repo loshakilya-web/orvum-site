@@ -80,46 +80,171 @@ const jsonld = {
 
 <main id="main">
 
-<!-- 01 · ONE DECISION -->
+<!-- 01 · THREE DECISIONS (owner brief, 9 Nov 2026; shorter, 12 Nov): showroom, deliveries, in-season — one tab each -->
 <section class="sec light" id="decision" aria-labelledby="decision-h">
   <div class="wrap">
     <p class="eyebrow"><span>01</span> One decision, made intelligently <em class="tagx">Illustrative</em></p>
     <h2 id="decision-h">What ORVUM puts in front of an owner.</h2>
-    <p class="lead">Midway through a weak season: sell-through is below plan, stock is ageing in some stores, key sizes are missing in others, and supplier payments for the next collection are approaching. A POS sees the sales, an ERP sees the orders, a CRM sees the clients. ORVUM reads them together — and turns them into one decision.</p>
+    <p class="lead">Three moments decide a retail season: what you commit to in the showroom, which ready goods you pay for first, and how you protect margin on the stock you hold.</p>
 
-    <article class="dcard" aria-label="Example ORVUM recommendation">
-      <div class="dcard-h"><span>ORVUM · Recommendation · ready for approval</span><span class="dcard-own">For the owner · this week</span></div>
-      <h3 class="dcard-t">Hold the price on the autumn knitwear for two more weeks. Move 18 pieces in sizes M–L from Store 3 to Store 7, and invite 11 clients who buy this brand.</h3>
-      <div class="dcard-g">
-        <div>
-          <p class="dk">Why — the evidence</p>
-          <ul class="dev">
-            <li><b>Sales · Inventory</b>Sell-through is 9 points below plan, and most of the unsold knitwear is in Store 3.</li>
-            <li><b>Stores &amp; POS</b>Store 7 could not serve 23 requests for sizes M–L in the last three weeks.</li>
-            <li><b>CRM</b>11 clients bought this brand in M–L last season and agreed to be contacted.</li>
-            <li><b>Finance · Purchase orders</b>The next collection’s supplier payment is due in 19 days; the plan still covers it.</li>
-          </ul>
+    <div class="dtabs" role="tablist" aria-label="Three moments of a retail season">
+      <button type="button" class="dtab" role="tab" id="dtab-a" aria-controls="dpanel-a" aria-selected="true"><span class="dtab-k">01A · Showroom</span><span class="dtab-n">OTB &amp; joint season plan</span></button>
+      <button type="button" class="dtab" role="tab" id="dtab-b" aria-controls="dpanel-b" aria-selected="false" tabindex="-1"><span class="dtab-k">01B · Deliveries</span><span class="dtab-n">Ready goods &amp; cash velocity</span></button>
+      <button type="button" class="dtab" role="tab" id="dtab-c" aria-controls="dpanel-c" aria-selected="false" tabindex="-1"><span class="dtab-k">01C · In-season</span><span class="dtab-n">Aged stock &amp; margin protection</span></button>
+    </div>
+
+    <div class="dpanel" id="dpanel-a" role="tabpanel" aria-labelledby="dtab-a" tabindex="0">
+      <p class="dpanel-k">01A · Pre-season decision · Illustrative</p>
+      <h3 class="dpanel-h">A key brand asks for 15% more budget (€480k → €552k), with 35% of the order in seasonal ready-to-wear (RTW).</h3>
+    <article class="dcard" aria-label="Example ORVUM recommendation: open-to-buy and joint season plan">
+      <div class="dcard-h"><span>ORVUM · OTB recommendation · ready for approval</span><span class="dcard-own">For the owner &amp; head buyer</span></div>
+      <h4 class="dcard-t">Keep the overall budget. Rebalance this brand.</h4>
+      <ul class="dsteps">
+        <li><span>Brand open-to-buy</span> <strong>€480k → €420k (−12.5%)</strong></li>
+        <li><span>Seasonal RTW</span> <strong>35% → 18% of the order</strong></li>
+        <li><span>More weight into</span> <strong>Core footwear and knitwear, sizes 38–40 and M</strong></li>
+        <li><span>Freed €60k goes to</span> <strong>A rising brand that sells 84% at full price</strong></li>
+      </ul>
+      <p class="dk">Why — the evidence</p>
+      <ul class="dev">
+        <li><b>Buying</b> <span class="dfig">68% → 41%</span> full-price sell-through of its RTW in two seasons</li>
+        <li><b>CRM</b> <span class="dfig">19 of 34 VIP clients</span> have moved their spending to two other houses</li>
+        <li><b>Pricing</b> <span class="dfig">29% vs 62% target</span> realised gross margin on seasonal RTW</li>
+        <li><b>Finance</b> <span class="dfig">€110k gap in October</span> if the larger order is accepted</li>
+      </ul>
+      <details class="dneg dmore">
+        <summary>Alternatives, consequences &amp; the joint season plan</summary>
+        <div class="dcard-g">
+          <div>
+            <p class="dk">More evidence</p>
+            <ul class="dalt">
+              <li><b>Category split</b>The plan’s category split has stayed the same while RTW sell-through fell.</li>
+              <li><b>VIP clients</b>Of the 34 who bought this brand’s total looks two years ago, the rest buy its footwear and knitwear at full price, but its seasonal dresses only on markdown.</li>
+              <li><b>Cash</b>The 30% order deposit falls in the weeks of peak autumn supplier payments.</li>
+            </ul>
+            <p class="dk">Alternatives ORVUM weighed</p>
+            <ul class="dalt">
+              <li><b>Repeat last season’s plan</b>Simple, but puts €117k more into slow RTW (€193k instead of €76k) — stock that has cleared only on markdown.</li>
+              <li><b>Repeat last year’s structure</b>Ignores the 19 VIP clients who moved to other houses, and repeats last season’s margin erosion.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="dk">Expected consequences</p>
+            <dl class="dcons">
+              <div><dt>Buying capital (OTB)</dt><dd>€60,000 moved from slow-turning RTW — either reallocated to high-velocity demand (84% full-price sell-through) or held as uncommitted OTB reserve.</dd></div>
+              <div><dt>Gross profit</dt><dd>Realised gross margin on this brand: +9% projected</dd></div>
+              <div><dt>Cash</dt><dd>October supplier payments covered, without credit strain</dd></div>
+            </dl>
+            <p class="dk">Joint season plan for the brand meeting</p>
+            <dl class="dcons">
+              <div><dt>Position</dt><dd>€420k · RTW 18%</dd></div>
+              <div><dt>Alternative</dt><dd>€450k · RTW 25%, if the brand prefers a broader mix. Both options keep the target margin.</dd></div>
+              <div><dt>Shared goal</dt><dd>More of the collection sold at full price protects the brand’s image and the retailer’s margin. Its trousers in XS and L have gone to sale three seasons running, while footwear in 38–40 loses sales to missing stock. With the current split, about 45% of the collection would end the season on the discount rail.</dd></div>
+            </dl>
+          </div>
         </div>
-        <div>
-          <p class="dk">Alternatives ORVUM weighed</p>
-          <ul class="dalt">
-            <li><b>Mark down 30% now</b>Clears stock faster, but gives up margin on knitwear that still has demand.</li>
-            <li><b>Do nothing</b>Ageing stock grows, and a later markdown would have to be deeper.</li>
-          </ul>
-          <p class="dk">Expected consequences</p>
-          <dl class="dcons">
-            <div><dt>Gross profit</dt><dd>More knitwear sold at full price — if clients respond</dd></div>
-            <div><dt>Residual stock</dt><dd>Lower at season end</dd></div>
-            <div><dt>Cash</dt><dd>Supplier payment still covered; a small transfer cost</dd></div>
-          </dl>
-        </div>
-      </div>
-      <div class="dcard-f"><button type="button" class="dbtn" aria-disabled="true" aria-describedby="dcard-note">Approve</button><button type="button" class="dbtn o" aria-disabled="true" aria-describedby="dcard-note">Adjust</button><button type="button" class="dbtn o" aria-disabled="true" aria-describedby="dcard-note">Reject</button><small id="dcard-note">After approval, store tasks are created, the decision is recorded, and the result is compared with this estimate in week 8. Preview only — nothing can be approved here.</small><p class="dmsg" role="status" aria-live="polite"></p></div>
+        <p class="dflow-note">In the designed workflow, after approval, the OTB ceiling is locked, the brand meeting brief is prepared, and committed cash is updated in Finance.</p>
+      </details>
+      <div class="dcard-f"><button type="button" class="dbtn" aria-disabled="true" aria-describedby="dnote-a">Approve OTB &amp; prepare the brand meeting brief</button><button type="button" class="dbtn o" aria-disabled="true" aria-describedby="dnote-a">Adjust split</button><button type="button" class="dbtn o" aria-disabled="true" aria-describedby="dnote-a">Reject</button><small id="dnote-a">Preview only — nothing can be approved here.</small><p class="dmsg" role="status" aria-live="polite"></p></div>
     </article>
+    </div>
 
-    <p class="dwhy"><strong>Why this is smarter than separate systems:</strong> the recommendation exists only because stock, client demand, purchase commitments and cash are read together — with the evidence behind every line and a person who approves.</p>
+    <div class="dpanel" id="dpanel-b" role="tabpanel" aria-labelledby="dtab-b" tabindex="0" hidden>
+      <p class="dpanel-k">01B · Delivery-window decision · Illustrative</p>
+      <h3 class="dpanel-h">€310k of ready goods (at cost) wait for payment at four suppliers. This week’s release budget is €140k.</h3>
+    <article class="dcard" aria-label="Example ORVUM recommendation: ready-goods release and cash">
+      <div class="dcard-h"><span>ORVUM · Ready-goods release priority · ready for approval</span><span class="dcard-own">For the owner, buyer &amp; finance</span></div>
+      <h4 class="dcard-t">Release the fast sellers today. Hold the winter outerwear.</h4>
+      <ul class="dsteps">
+        <li><span>Pay &amp; release today</span> <strong>Shipment B · €82k at cost · transitional footwear and denim</strong></li>
+        <li><span>Pay &amp; release today</span> <strong>Part of Lot A1 · €58k at cost · core carry-over knitwear</strong></li>
+        <li><span>Hold for 18 days</span> <strong>Shipment C · €115k at cost · heavy winter outerwear</strong></li>
+      </ul>
+      <p class="dk">Why — the evidence</p>
+      <ul class="dev">
+        <li><b>Stores &amp; POS</b> <span class="dfig">≈ €14k of sales lost a week</span> missing sizes 38–41 in transitional footwear</li>
+        <li><b>CRM</b> <span class="dfig">29 VIP clients waiting</span> for items in Shipment B and Lot A1</li>
+        <li><b>Inventory</b> <span class="dfig">6.5 weeks of outerwear in stock</span> it sells only from mid-next month</li>
+        <li><b>Finance</b> <span class="dfig">€105k back in 18 days</span> net cash from Shipment B + Lot A1</li>
+      </ul>
+      <details class="dneg dmore">
+        <summary>Alternatives &amp; consequences</summary>
+        <div class="dcard-g">
+          <div>
+            <p class="dk">More evidence</p>
+            <ul class="dalt">
+              <li><b>Clienteling</b>Clienteling appointments are already lined up for reserved pieces upon arrival, accelerating early full-price sell-through.</li>
+              <li><b>Outerwear cash</b>Paying €115k today would hold that cash on the rails for 40+ days. Shipment C waits at the supplier’s warehouse.</li>
+              <li><b>Net cash</b>Projected cash availability accounts for VAT, card-settlement timing, and ring-fenced store obligations. Priority releases are expected to fund most of Shipment C, with any remaining shortfall requiring confirmed available cash or agreed supplier terms before approval.</li>
+            </ul>
+            <p class="dk">Alternatives ORVUM weighed</p>
+            <ul class="dalt">
+              <li><b>Pay by invoice date (Shipment C first)</b>Puts €115k into outerwear that sells later and delays fast-selling footwear by three weeks — so cash comes back later.</li>
+              <li><b>Split €140k evenly across all four suppliers</b>Breaks size runs in every category, leaving stores with incomplete assortments and weaker sales.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="dk">Expected consequences</p>
+            <dl class="dcons">
+              <div><dt>Full-price sales</dt><dd>+€94k in the first three weeks, compared with paying by invoice date</dd></div>
+              <div><dt>Cash velocity</dt><dd>€105,000 in net available cash (ex-VAT, cleared funds) within 18 days — covering 91% of the €115k supplier balance (at cost) for Shipment C. The remaining €10k needs confirmed available cash or agreed supplier terms before approval.</dd></div>
+              <div><dt>Suppliers</dt><dd>Payment terms and shipping windows kept within agreed contract tolerances</dd></div>
+            </dl>
+          </div>
+        </div>
+        <p class="dflow-note">In the designed workflow, after approval, Finance queues the supplier releases for Shipment B and Lot A1, Receiving prepares priority intake, and Shipment C is scheduled for the Day 18 cash cycle once the remaining €10k is confirmed.</p>
+      </details>
+      <div class="dcard-f"><button type="button" class="dbtn" aria-disabled="true" aria-describedby="dnote-b">Approve payment &amp; release queue</button><button type="button" class="dbtn o" aria-disabled="true" aria-describedby="dnote-b">Adjust tranches</button><button type="button" class="dbtn o" aria-disabled="true" aria-describedby="dnote-b">Reject</button><small id="dnote-b">Preview only — nothing can be approved here.</small><p class="dmsg" role="status" aria-live="polite"></p></div>
+    </article>
+    </div>
 
-    <h3 class="flow-h">How ORVUM reaches a decision like this</h3>
+    <div class="dpanel" id="dpanel-c" role="tabpanel" aria-labelledby="dtab-c" tabindex="0" hidden>
+      <p class="dpanel-k">01C · In-season decision · Illustrative</p>
+      <h3 class="dpanel-h">Mid-season, sell-through is below plan: stock is ageing in one store, sizes are missing in another, and a supplier payment is coming.</h3>
+    <article class="dcard" aria-label="Example ORVUM recommendation: aged stock and margin">
+      <div class="dcard-h"><span>ORVUM · Recommendation · ready for approval</span><span class="dcard-own">For the owner · this week</span></div>
+      <h4 class="dcard-t">Hold the price. Move the stock to where clients ask for it.</h4>
+      <ul class="dsteps">
+        <li><span>Autumn knitwear price</span> <strong>Hold for two more weeks</strong></li>
+        <li><span>Move</span> <strong>18 pieces in sizes M–L · Store 3 → Store 7</strong></li>
+        <li><span>Invite</span> <strong>11 clients who buy this brand</strong></li>
+      </ul>
+      <p class="dk">Why — the evidence</p>
+      <ul class="dev">
+        <li><b>Sales &amp; stock</b> <span class="dfig">9% below plan</span> most of the unsold knitwear is in Store 3</li>
+        <li><b>Stores &amp; POS</b> <span class="dfig">23 requests not served</span> for sizes M–L at Store 7 in three weeks</li>
+        <li><b>CRM</b> <span class="dfig">11 clients ready to contact</span> bought this brand in M–L last season</li>
+        <li><b>Finance</b> <span class="dfig">Payment due in 19 days</span> the plan still covers it</li>
+      </ul>
+      <details class="dneg dmore">
+        <summary>Alternatives &amp; consequences</summary>
+        <div class="dcard-g">
+          <div>
+            <p class="dk">Alternatives ORVUM weighed</p>
+            <ul class="dalt">
+              <li><b>Mark down 30% now</b>Clears stock faster, but gives up margin on knitwear that still has demand.</li>
+              <li><b>Do nothing</b>Ageing stock grows, and a later markdown would have to be deeper.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="dk">Expected consequences</p>
+            <dl class="dcons">
+              <div><dt>Gross profit</dt><dd>More knitwear sold at full price — if clients respond</dd></div>
+              <div><dt>Residual stock</dt><dd>Lower at season end</dd></div>
+              <div><dt>Cash</dt><dd>Supplier payment still covered; a small transfer cost</dd></div>
+            </dl>
+          </div>
+        </div>
+        <p class="dflow-note">In the designed workflow, after approval, store tasks are created, the decision is recorded, and the result is compared with this estimate in week 8.</p>
+      </details>
+      <div class="dcard-f"><button type="button" class="dbtn" aria-disabled="true" aria-describedby="dnote-c">Approve</button><button type="button" class="dbtn o" aria-disabled="true" aria-describedby="dnote-c">Adjust</button><button type="button" class="dbtn o" aria-disabled="true" aria-describedby="dnote-c">Reject</button><small id="dnote-c">Preview only — nothing can be approved here.</small><p class="dmsg" role="status" aria-live="polite"></p></div>
+    </article>
+    </div>
+
+    <p class="dwhy"><strong>Why one system:</strong> each recommendation needs buying, stock, clients, commitments and cash read together — with the evidence shown and a person who approves.</p>
+
+    <details class="dflow">
+      <summary>How ORVUM reaches a decision — 4 steps</summary>
     <div class="flow">
       <div class="fstep">
         <p class="fk"><span>1</span> Evidence</p>
@@ -165,7 +290,10 @@ const jsonld = {
         </ol>
       </div>
     </div>
-    <p class="note">Illustrative example: stores, figures and clients are invented. It shows how ORVUM is designed to work; it does not describe a customer deployment or a measured result.</p>
+    </details>
+
+    <aside class="dsurface" aria-label="What this site shows"><p><strong>Only the visible surface.</strong> Three core decisions are shown here. The working prototype and deeper modules are shown privately, under NDA.</p></aside>
+    <p class="note">Illustrative examples: stores, brands, figures and clients are invented. They show how ORVUM is designed to work; they do not describe a customer deployment or a measured result.</p>
   </div>
 </section>
 
