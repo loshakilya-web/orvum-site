@@ -6,45 +6,136 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/company", "destination": "/about", "permanent": true },
-    { "source": "/company/:path*", "destination": "/about", "permanent": true },
-    { "source": "/solutions/retailers", "destination": "/platform", "permanent": true },
-    { "source": "/ai", "destination": "/platform", "permanent": true },
-    { "source": "/index.html", "destination": "/", "permanent": true },
-    { "source": "/app", "destination": "https://demo.orvum.com/app/", "permanent": true },
-    { "source": "/app/:path*", "destination": "https://demo.orvum.com/app/:path*", "permanent": true },
-    { "source": "/x/:path*", "destination": "https://demo.orvum.com/x/:path*", "permanent": true },
-    { "source": "/api/:path*", "destination": "https://demo.orvum.com/api/:path*", "permanent": true }
+    {
+      "source": "/site/gate.html",
+      "destination": "https://demo.orvum.com/",
+      "permanent": false
+    },
+    {
+      "source": "/site/gate",
+      "destination": "https://demo.orvum.com/",
+      "permanent": false
+    },
+    {
+      "source": "/company",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/company/:path*",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/solutions/retailers",
+      "destination": "/platform",
+      "permanent": true
+    },
+    {
+      "source": "/ai",
+      "destination": "/platform",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/app",
+      "destination": "https://demo.orvum.com/app/",
+      "permanent": true
+    },
+    {
+      "source": "/app/:path*",
+      "destination": "https://demo.orvum.com/app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/x/:path*",
+      "destination": "https://demo.orvum.com/x/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "https://demo.orvum.com/api/:path*",
+      "permanent": true
+    }
   ],
   "headers": [
     {
       "source": "/(.*)",
       "headers": [
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; media-src 'self'; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'none'; form-action 'self'; object-src 'none'" },
-        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
-        { "key": "Permissions-Policy", "value": "microphone=(), camera=(), geolocation=(), payment=()" },
-        { "key": "Referrer-Policy", "value": "no-referrer" },
-        { "key": "Strict-Transport-Security", "value": "max-age=31536000" },
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" }
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; media-src 'self'; worker-src 'self' blob:; frame-ancestors 'none'; base-uri 'none'; form-action 'self'; object-src 'none'"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "microphone=(), camera=(), geolocation=(), payment=()"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        }
       ]
     },
     {
       "source": "/hero.html",
       "headers": [
-        { "key": "Content-Security-Policy", "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; media-src 'self'; worker-src 'self' blob:; frame-ancestors 'self'; base-uri 'none'; form-action 'self'; object-src 'none'" },
-        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
-        { "key": "X-Robots-Tag", "value": "noindex, indexifembedded" }
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; media-src 'self'; worker-src 'self' blob:; frame-ancestors 'self'; base-uri 'none'; form-action 'self'; object-src 'none'"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, indexifembedded"
+        }
       ]
     },
     {
       "source": "/llms.txt",
-      "headers": [ { "key": "Content-Type", "value": "text/plain; charset=utf-8" } ]
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        }
+      ]
     },
     {
       "source": "/(.*)",
-      "missing": [ { "type": "host", "value": "www.orvum.com" } ],
-      "headers": [ { "key": "X-Robots-Tag", "value": "noindex, nofollow" } ]
+      "missing": [
+        {
+          "type": "host",
+          "value": "www.orvum.com"
+        }
+      ],
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
     }
   ]
 }
