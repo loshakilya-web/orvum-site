@@ -42,7 +42,7 @@
   if (!frame || !target) return;
   var hook = function () {
     var d; try { d = frame.contentDocument; } catch (err) { return; }
-    if (!d || !d.defaultView || d.orvumDecision || !/\/hero\.html$/.test(d.location.pathname)) return;
+    if (!d || !d.defaultView || d.orvumDecision || !/\/hero(\.html)?$/.test(d.location.pathname)) return;
     d.orvumDecision = true;
     d.defaultView.addEventListener('click', function (e) {
       var a = e.target && e.target.closest ? e.target.closest('[data-go="decision"]') : null;
@@ -91,7 +91,7 @@
   if (!frame || !contact) return;
   var hook = function () {
     var d; try { d = frame.contentDocument; } catch (err) { return; }
-    if (!d || !d.defaultView || d.orvumContact || !/\/hero\.html$/.test(d.location.pathname)) return;
+    if (!d || !d.defaultView || d.orvumContact || !/\/hero(\.html)?$/.test(d.location.pathname)) return;
     d.orvumContact = true;
     d.defaultView.addEventListener('click', function (e) {
       var a = e.target && e.target.closest ? e.target.closest('[data-go="contact"]') : null;

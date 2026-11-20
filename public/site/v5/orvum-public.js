@@ -202,7 +202,7 @@
         // the hero navigated to another origin (the private demo): continue there at the top level
         window.location.href = 'https://demo.orvum.com/app/#/core'; return;
       }
-      if (p !== '/hero.html') { window.location.href = w.location.href; return; }   // e.g. Privacy
+      if (p !== '/hero.html' && p !== '/hero') { window.location.href = w.location.href; return; }   // e.g. Privacy
       // Wheel and touch scrolling chain from the hero to this page natively, so nothing is forwarded (avoids double scrolling).
     });
   }
