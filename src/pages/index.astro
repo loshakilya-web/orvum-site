@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Footer from '../components/Footer.astro';
 import { SITE, EMAIL, LINKEDIN, INSTAGRAM } from '../site.mjs';
-const description = 'ORVUM is an AI-native retail operating system in development for luxury multi-brand retail: buying, inventory, POS, clienteling and finance in one layer.';
+const description = 'ORVUM is an AI-native retail operating system in development: buying, inventory, POS, clienteling and finance in one layer, for retailers and brands.';
 const jsonld = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -12,7 +12,7 @@ const jsonld = {
       name: 'ORVUM',
       url: `${SITE}/`,
       logo: { '@type': 'ImageObject', url: `${SITE}/site/brand/icon-512.png`, width: 512, height: 512 },
-      description: 'ORVUM is an AI-native retail operating system in development for premium and luxury multi-brand retail.',
+      description: 'ORVUM is an AI-native retail operating system in development for retailers and the brands they work with.',
       foundingLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressCountry: 'CY' } },
       areaServed: 'Worldwide',
       email: EMAIL,
@@ -31,7 +31,7 @@ const jsonld = {
       '@type': 'WebPage',
       '@id': `${SITE}/#webpage`,
       url: `${SITE}/`,
-      name: 'ORVUM — AI-Native Retail Operating System for Luxury Retail',
+      name: 'ORVUM — The AI-Native Retail Operating System',
       description,
       inLanguage: 'en',
       isPartOf: { '@id': `${SITE}/#website` },
@@ -41,19 +41,19 @@ const jsonld = {
 };
 ---
 <Base
-  title="ORVUM — AI-Native Retail Operating System for Luxury Retail"
+  title="ORVUM — The AI-Native Retail Operating System"
   description={description}
   canonical={`${SITE}/`}
   robots="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
   ogTitle="ORVUM — AI-Native Retail Operating System"
-  ogDescription="One intelligence layer for buying, inventory, POS, clienteling and finance. Built for premium and luxury multi-brand retail. In development."
+  ogDescription="One intelligence layer for buying, inventory, POS, clienteling and finance — for retailers and the brands they work with. In development."
   jsonld={jsonld}
   css={['/site/v5/orvum-public.css', '/site/v5/orvum-public-2.css', '/site/v5/orvum-public-3.css']}
 >
 <a class="skip" href="#decision">Skip to content</a>
 
 <h1 class="vh">ORVUM — The Intelligence Core for Retail</h1>
-<p class="vh">ORVUM is an AI-native retail operating system in development, designed for premium and luxury multi-brand retail.</p>
+<p class="vh">ORVUM is an AI-native retail operating system in development, designed for retailers and the brands they work with.</p>
 
 <!-- The first screen is the production hero; every change to it is listed in build.mjs. -->
 <div class="hero-frame" id="top">
@@ -458,7 +458,7 @@ const jsonld = {
     <h2 id="questions-h">Questions</h2>
     <div class="trust">
       <article><h3>What is ORVUM?</h3><p>ORVUM is an AI-native retail operating system in development. It is designed to run buying, inventory, store sales, clienteling and finance in one connected system instead of separate tools and spreadsheets.</p></article>
-      <article><h3>Who is ORVUM for?</h3><p>The initial focus is premium and luxury multi-brand retail — independent boutiques and retail groups that carry many brands. The long-term aim is retail in general.</p></article>
+      <article><h3>Who is ORVUM for?</h3><p>Retailers and the brands they work with — from independent stores to multi-store retail groups. ORVUM is designed for businesses that buy from many suppliers, sell through several channels and need stock, sales and cash to tell the same story.</p></article>
       <article><h3>Is ORVUM available now?</h3><p>Not yet. ORVUM is in development and the website demo is illustrative. You can contact us to follow progress or discuss early conversations.</p></article>
       <article><h3>What does “AI-native” mean here?</h3><p>AI is part of the core design rather than an add-on: AI agents are intended to plan, monitor and propose actions, while consequential decisions stay with people through explicit approval steps.</p></article>
       <article><h3>Where is ORVUM based?</h3><p>Cyprus.</p></article>
