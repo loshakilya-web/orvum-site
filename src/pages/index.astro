@@ -2,7 +2,7 @@
 import Base from '../layouts/Base.astro';
 import Footer from '../components/Footer.astro';
 import { SITE, EMAIL, LINKEDIN, INSTAGRAM } from '../site.mjs';
-const description = 'ORVUM is an AI-native retail operating system in development, designed to read buying, stock, clients and cash together and prepare decisions for approval.';
+const description = 'AI-native retail operating system in development: one intelligence across buying, inventory, stores, clients and finance, with people approving every decision.';
 const jsonld = {
   '@context': 'https://schema.org',
   '@graph': [
@@ -31,7 +31,7 @@ const jsonld = {
       '@type': 'WebPage',
       '@id': `${SITE}/#webpage`,
       url: `${SITE}/`,
-      name: 'ORVUM — AI Retail Operating System for Buying, Stock & Cash',
+      name: 'ORVUM — The AI Operating System for Retail',
       description,
       inLanguage: 'en',
       isPartOf: { '@id': `${SITE}/#website` },
@@ -41,11 +41,11 @@ const jsonld = {
 };
 ---
 <Base
-  title="ORVUM — AI Retail Operating System for Buying, Stock & Cash"
+  title="ORVUM — The AI Operating System for Retail"
   description={description}
   canonical={`${SITE}/`}
   robots="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
-  ogTitle="ORVUM — AI Retail Operating System for Buying, Stock & Cash"
+  ogTitle="ORVUM — The AI Operating System for Retail"
   ogDescription={description}
   jsonld={jsonld}
   css={['/site/v5/orvum-public.css', '/site/v5/orvum-public-2.css', '/site/v5/orvum-public-3.css']}
