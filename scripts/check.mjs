@@ -8,6 +8,16 @@ const pages = {
   '/contact': { file: 'contact.html', title: 'Contact ORVUM', h1: 'Contact ORVUM', must: ['truth@orvum.com', 'linkedin.com/company/orvum', 'Cyprus'] },
   '/privacy': { file: 'privacy.html', title: 'Privacy · ORVUM', h1: 'Privacy', must: ['Vercel Web Analytics', 'ORVUM TECHNOLOGIES LTD', 'Notice version'] },
   '/terms': { file: 'terms.html', title: 'Terms of use · ORVUM', h1: 'Website terms of use', must: ['Terms version'] },
+  '/tools': { file: 'tools.html', title: 'Free Retail Calculators for Buyers and Owners — ORVUM', h1: 'Free retail calculators', must: ['/tools/open-to-buy-calculator', '/tools/sell-through-calculator'] },
+  '/tools/open-to-buy-calculator': { file: 'tools/open-to-buy-calculator.html', title: 'Open-to-Buy Calculator — Monthly and Seasonal OTB', h1: 'Open-to-buy calculator', must: ['Open-to-buy = planned purchases', 'not a cash budget', '/js/calc-otb.js'] },
+  '/tools/sell-through-calculator': { file: 'tools/sell-through-calculator.html', title: 'Sell-Through Rate Calculator — With Weeks of Supply', h1: 'Sell-through rate calculator', must: ['130 ÷ 250 = 52%', 'net of customer returns', '/js/calc-st.js'] },
+  '/glossary': { file: 'glossary.html', title: 'Retail Metrics Glossary — Buying and Inventory Terms', h1: 'Retail metrics glossary', must: ['DefinedTermSet'] },
+  '/glossary/open-to-buy': { file: 'glossary/open-to-buy.html', title: 'Open-to-Buy (OTB): Definition, Formula and Example', h1: 'Open-to-buy (OTB)', must: ['DefinedTerm', 'open-to-buy €80,000'] },
+  '/glossary/sell-through-rate': { file: 'glossary/sell-through-rate.html', title: 'Sell-Through Rate: Definition, Formula and Example', h1: 'Sell-through rate', must: ['130 ÷ 250 = 52%'] },
+  '/glossary/gmroi': { file: 'glossary/gmroi.html', title: 'GMROI: Definition, Formula and Example for Retail', h1: 'GMROI (gross margin return on inventory investment)', must: ['GMROI of 1.5'] },
+  '/glossary/weeks-of-supply': { file: 'glossary/weeks-of-supply.html', title: 'Weeks of Supply: Definition, Formula and Example', h1: 'Weeks of supply (WOS)', must: ['15 weeks of supply'] },
+  '/glossary/inventory-turnover': { file: 'glossary/inventory-turnover.html', title: 'Inventory Turnover: Definition, Formula, Example', h1: 'Inventory turnover', must: ['turnover of 2.5'] },
+  '/glossary/clienteling': { file: 'glossary/clienteling.html', title: 'Clienteling: What It Is and How It Works in Retail', h1: 'Clienteling', must: ['GDPR'] },
 };
 let fail = 0;
 const bad = (m) => { fail++; console.log('  FAIL', m); };
@@ -44,11 +54,11 @@ if (/pin-in|\/api\/pin|keypad/.test(hero)) bad('hero still contains the access-c
 if (!/noindex, indexifembedded/.test(hero)) bad('hero lost noindex');
 for (const f of ['robots.txt', 'llms.txt', '404.html', 'site/brand/og-image.png', 'site/brand/icon-512.png', 'googlefe6f4722fdf19bee.html']) if (!existsSync(`dist/${f}`)) bad(`missing ${f}`);
 // every local asset referenced by a page exists
-for (const f of ['index.html', 'platform.html', 'about.html', 'contact.html', 'privacy.html', 'terms.html', '404.html', 'hero.html']) {
+for (const f of ['404.html', 'hero.html', ...Object.values(pages).map((p) => p.file)]) {
   const h = readFileSync(`dist/${f}`, 'utf8');
   for (const m of h.matchAll(/(?:src|href)="(\/[^"#?]*)"/g)) {
     const u = m[1]; if (u.startsWith('/_vercel/') || ['/hero', '/', '/platform', '/about', '/contact', '/privacy', '/terms'].includes(u)) continue;
-    if (!existsSync(`dist${u}`)) bad(`${f}: missing asset ${u}`);
+    if (!existsSync(`dist${u}`) && !existsSync(`dist${u}.html`)) bad(`${f}: missing asset ${u}`);
   }
 }
 console.log(fail ? `\n${fail} problem(s)` : '\nAll checks passed');

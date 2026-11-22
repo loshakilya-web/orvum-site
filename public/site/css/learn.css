@@ -1,0 +1,63 @@
+/* Tools and glossary (Site Brief #2). Builds on orvum-public + pages.css tokens. */
+.crumbs ol { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; padding: 0; list-style: none; font-family: var(--mono); font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+.crumbs li + li::before { content: "/"; margin-right: 8px; color: var(--ink-3); }
+.crumbs a { color: var(--ink-2); text-decoration: none; }
+.crumbs a:hover { color: var(--ink); }
+.crumbs [aria-current] { color: var(--signal); }
+
+.cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin: 0; padding: 0; list-style: none; }
+.cards a { display: block; height: 100%; background: #fff; border: 1px solid var(--line-l); border-radius: 14px; padding: 22px 24px; text-decoration: none; color: var(--char); transition: border-color .2s; }
+.cards a:hover { border-color: var(--signal); }
+.cards h3 { margin: 0 0 6px; font-size: 20px; }
+.cards p { margin: 0; color: var(--char-2); font-size: 16px; }
+
+.prose h2 { margin: 40px 0 14px; font-size: clamp(22px, 2.2vw, 28px); letter-spacing: -.01em; }
+.prose h2:first-child { margin-top: 0; }
+.prose h3 { margin: 26px 0 6px; font-size: 18px; }
+.formula { font-family: var(--mono); font-size: 15px; line-height: 1.7; background: #fff; border: 1px solid var(--line-l); border-left: 3px solid var(--signal); border-radius: 8px; padding: 14px 18px; color: var(--char) !important; }
+.tag { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--char-3); vertical-align: middle; margin-left: 8px; font-weight: 400; }
+.rel { margin: 0; padding: 0; list-style: none; display: grid; gap: 8px; }
+.rel a, .rel-line a, .prose .note a { color: var(--signal-ink); }
+
+.calc { background: #fff; border: 1px solid var(--line-l); border-radius: 16px; padding: clamp(20px, 3vw, 34px); max-width: 880px; color: var(--char); }
+.calc fieldset { border: 0; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; }
+.calc legend { float: left; margin-right: 12px; font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--char-3); }
+.calc-opts { display: flex; flex-wrap: wrap; gap: 14px 34px; margin-bottom: 14px; }
+.calc-opts p { margin: 0; display: flex; gap: 10px; align-items: center; }
+.calc-opts label { font-size: 15.5px; }
+.calc .hint { color: var(--char-3); font-size: 14px; font-weight: 400; }
+.calc > form > .hint { margin: 0 0 18px; }
+.calc .grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 12px 18px; align-items: start; }
+.calc .grid label { font-weight: 600; font-size: 15.5px; padding-top: 10px; }
+.calc .grid label .hint { display: block; font-weight: 400; }
+.calc input:not([type]), .calc input[inputmode], .calc select { font: inherit; font-size: 17px; padding: 10px 12px; border: 1px solid #c9c6c0; border-radius: 9px; background: #fff; color: var(--char); width: 100%; box-sizing: border-box; }
+.calc select { width: auto; }
+.calc input[aria-invalid="true"] { border-color: #b42318; }
+.calc .ferr { grid-column: 2; margin: -6px 0 0; color: #b42318; font-size: 14px; }
+.calc .month { margin-top: 18px; display: block; }
+.calc .month legend { float: none; margin-bottom: 10px; font-size: 13px; color: var(--char); }
+.calc-go { margin: 22px 0 0; display: flex; gap: 12px; flex-wrap: wrap; }
+.calc-out:not(:empty) { margin-top: 24px; border-top: 1px solid var(--line-l); padding-top: 20px; }
+.calc-r { margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; }
+.calc-r div { background: var(--paper); border-radius: 10px; padding: 14px 16px; }
+.calc-r dt { font-family: var(--mono); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--char-3); }
+.calc-r dd { margin: 6px 0 0; font-size: 24px; font-weight: 650; }
+.calc-r .main { background: #1a0a04; color: #fff; }
+.calc-r .main dt { color: #ffb27a; }
+.calc-r .neg dd, .calc-t .neg { color: #b42318; }
+.calc-r .main.neg { background: #fbebeb; color: var(--char); }
+.calc-r .main.neg dd { color: #b42318; }
+.calc-msg { margin: 14px 0 0; color: var(--char-2); font-size: 15px; }
+.calc-msg.err { color: #b42318; font-weight: 600; }
+.calc-t { width: 100%; border-collapse: collapse; font-size: 16px; }
+.calc-t caption { text-align: left; font-family: var(--mono); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--char-3); padding-bottom: 8px; }
+.calc-t th, .calc-t td { text-align: right; padding: 8px 10px; border-bottom: 1px solid var(--line-l); }
+.calc-t th[scope="row"], .calc-t thead th:first-child { text-align: left; }
+.calc-t tfoot td, .calc-t tfoot th { font-weight: 700; border-bottom: 0; }
+.calc .note { color: var(--char-3); }
+@media (max-width: 760px) {
+  .cards { grid-template-columns: 1fr; }
+  .calc .grid { grid-template-columns: 1fr; gap: 6px; }
+  .calc .grid label { padding-top: 10px; }
+  .calc .ferr { grid-column: 1; margin: 0; }
+}

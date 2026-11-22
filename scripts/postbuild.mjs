@@ -11,6 +11,11 @@ const PAGES = [
   { path: '/contact', src: ['src/pages/contact.astro'] },
   { path: '/privacy', src: ['src/pages/privacy.astro', 'src/legal/privacy-body.html', 'src/site.mjs'] },
   { path: '/terms', src: ['src/pages/terms.astro', 'src/legal/terms-body.html'] },
+  { path: '/tools', src: ['src/pages/tools/index.astro', 'src/learn.mjs'] },
+  { path: '/tools/open-to-buy-calculator', src: ['src/pages/tools/open-to-buy-calculator.astro', 'public/js/calc-otb.js', 'src/learn.mjs'] },
+  { path: '/tools/sell-through-calculator', src: ['src/pages/tools/sell-through-calculator.astro', 'public/js/calc-st.js', 'src/learn.mjs'] },
+  { path: '/glossary', src: ['src/pages/glossary/index.astro', 'src/learn.mjs'] },
+  ...['open-to-buy', 'sell-through-rate', 'gmroi', 'weeks-of-supply', 'inventory-turnover', 'clienteling'].map((s) => ({ path: `/glossary/${s}`, src: ['src/pages/glossary/[slug].astro', 'src/learn.mjs'] })),
 ];
 
 const today = new Date().toISOString().slice(0, 10);
