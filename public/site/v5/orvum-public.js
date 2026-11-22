@@ -195,14 +195,15 @@
   /* ── Hosting the production hero ────────────────────────────────────────────── */
   var frame = document.getElementById('hero');
   if (frame) {
-    if (/[?&](?:locked|expired|signed-out)\b/.test(location.search)) frame.src = '/hero.html' + location.search;
+    // translated pages host their own hero (/de/hero, …): keep the frame's own path
+    if (/[?&](?:locked|expired|signed-out)\b/.test(location.search)) frame.src = (frame.getAttribute('src') || '/hero').split('?')[0] + location.search;
     frame.addEventListener('load', function () {
       var w;
       try { w = frame.contentWindow; var p = w.location.pathname; } catch (err) {
         // the hero navigated to another origin (the private demo): continue there at the top level
         window.location.href = 'https://demo.orvum.com/app/#/core'; return;
       }
-      if (p !== '/hero.html' && p !== '/hero') { window.location.href = w.location.href; return; }   // e.g. Privacy
+      if (!/^\/(?:[a-z]{2}\/)?hero(?:\.html)?$/.test(p)) { window.location.href = w.location.href; return; }   // e.g. Privacy
       // Wheel and touch scrolling chain from the hero to this page natively, so nothing is forwarded (avoids double scrolling).
     });
   }

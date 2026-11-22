@@ -44,10 +44,17 @@ if (/pin-in|\/api\/pin|keypad/.test(hero)) bad('hero still contains the access-c
 if (!/noindex, indexifembedded/.test(hero)) bad('hero lost noindex');
 for (const f of ['robots.txt', 'llms.txt', '404.html', 'site/brand/og-image.png', 'site/brand/icon-512.png', 'googlefe6f4722fdf19bee.html']) if (!existsSync(`dist/${f}`)) bad(`missing ${f}`);
 // every local asset referenced by a page exists
-for (const f of ['index.html', 'platform.html', 'about.html', 'contact.html', 'privacy.html', 'terms.html', '404.html', 'hero.html']) {
+// translated pages (scripts/i18n): /<code>, /<code>/platform, /<code>/about, /<code>/contact, /<code>/hero
+const LANGS = ['de', 'fr', 'it', 'es', 'ru', 'el', 'ar', 'zh'];
+const ROUTES = ['/hero', '/', '/platform', '/about', '/contact', '/privacy', '/terms'];
+const isRoute = (u) => ROUTES.includes(u) || LANGS.some((c) => u === `/${c}` || ['/platform', '/about', '/contact', '/hero'].some((r) => u === `/${c}${r}`));
+const PAGES_ALL = ['index.html', 'platform.html', 'about.html', 'contact.html', 'privacy.html', 'terms.html', '404.html', 'hero.html',
+  ...LANGS.flatMap((c) => ['index.html', 'platform.html', 'about.html', 'contact.html', 'hero.html'].map((f) => `${c}/${f}`))];
+for (const c of LANGS) for (const f of ['index.html', 'platform.html', 'about.html', 'contact.html', 'hero.html']) if (!existsSync(`dist/${c}/${f}`)) bad(`missing translated page ${c}/${f}`);
+for (const f of PAGES_ALL) {
   const h = readFileSync(`dist/${f}`, 'utf8');
   for (const m of h.matchAll(/(?:src|href)="(\/[^"#?]*)"/g)) {
-    const u = m[1]; if (u.startsWith('/_vercel/') || ['/hero', '/', '/platform', '/about', '/contact', '/privacy', '/terms'].includes(u)) continue;
+    const u = m[1]; if (u.startsWith('/_vercel/') || isRoute(u)) continue;
     if (!existsSync(`dist${u}`)) bad(`${f}: missing asset ${u}`);
   }
 }

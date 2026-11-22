@@ -146,6 +146,40 @@
       ]
     },
     {
+      "source": "/:lang(de|fr|it|es|ru|el|ar|zh)/hero",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; media-src 'self'; worker-src 'self' blob:; frame-ancestors 'self'; base-uri 'none'; form-action 'self'; object-src 'none'"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, indexifembedded"
+        }
+      ]
+    },
+    {
+      "source": "/:lang(de|fr|it|es|ru|el|ar|zh)/hero.html",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self'; connect-src 'self'; media-src 'self'; worker-src 'self' blob:; frame-ancestors 'self'; base-uri 'none'; form-action 'self'; object-src 'none'"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, indexifembedded"
+        }
+      ]
+    },
+    {
       "source": "/llms.txt",
       "headers": [
         {
