@@ -4,7 +4,7 @@ const S = 'https://www.orvum.com';
 const pages = {
   '/': { file: 'index.html', title: 'ORVUM — The AI-Native Retail Operating System', h1: 'ORVUM — The Intelligence Core for Retail', must: ['One operating system for the whole retail chain', 'What is ORVUM?', 'Where is ORVUM based?'] },
   '/platform': { file: 'platform.html', title: 'ORVUM Platform — Retail Buying, Inventory, POS & Finance', h1: 'The ORVUM platform', must: ['The problem: retail runs on disconnected systems', 'Design principles', 'Development status', 'One product master.'] },
-  '/about': { file: 'about.html', title: 'About ORVUM — Founded by a Retail Operator in Cyprus', h1: 'About ORVUM', must: ['Why we are building ORVUM', 'How we build', 'An operator, not a consultant'] },
+  '/about': { file: 'about.html', title: 'About ORVUM — Founded by a Luxury Retail Operator', h1: 'About ORVUM', must: ['Why we are building ORVUM', 'How we build', 'An operator, not a consultant'] },
   '/contact': { file: 'contact.html', title: 'Contact ORVUM', h1: 'Contact ORVUM', must: ['truth@orvum.com', 'linkedin.com/company/orvum', 'Cyprus'] },
   '/privacy': { file: 'privacy.html', title: 'Privacy · ORVUM', h1: 'Privacy', must: ['Vercel Web Analytics', 'ORVUM TECHNOLOGIES LTD', 'Notice version'] },
   '/terms': { file: 'terms.html', title: 'Terms of use · ORVUM', h1: 'Website terms of use', must: ['Terms version'] },
