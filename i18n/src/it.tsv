@@ -416,7 +416,7 @@ d33ea1a5f4	Budget d’acquisto indirizzato verso ciò che ha più probabilità d
 f7672db6ce	Trasforma gli acquisti approvati in ordini con quantità, prezzi, finestre di consegna e condizioni di pagamento.
 e3d23f6ade	Che cosa è impegnato, con quale fornitore, e quando servirà la liquidità.
 f76f90ad46	Ogni impegno è visibile prima di diventare un pagamento.
-f75e4531ae	Ricevimento merci &amp; Delivery Match
+f75e4531ae	Ricevimento merci & Delivery Match
 acaf7d964f	Entrata merci
 2b418d7b36	Confronta ciò che arriva con ciò che è stato ordinato — articolo, taglia, quantità e prezzo — prima che la merce vada in vendita.
 308656158b	Se accettare, contestare o rifiutare una consegna, e quali differenze chiarire con il fornitore.
@@ -429,12 +429,12 @@ bf01f8e213	Vendite e resi
 caa9890b80	Gestisce vendite, cambi e resi in negozio e sulla cassa mobile, collegati a stock, clienti e personale.
 b2899a6be9	Come servire, cambiare o rimborsare correttamente, con il prezzo giusto e il giusto dato di stock.
 9d997717ae	Ogni vendita e ogni reso aggiornano una sola volta, e correttamente, stock, scheda cliente e finanza.
-93585fa2eb	CRM &amp; clienteling
+93585fa2eb	CRM & clienteling
 4e23630af7	Conoscenza del cliente
 a48708de97	Riunisce in un’unica visione tutto ciò che riguarda ogni cliente: acquisti, taglie, preferenze e consenso al contatto.
 5c22438729	Quali clienti contattare, per quali prodotti e quando.
 74d8b918bf	Contatti pertinenti che aiutano a vendere lo stock attuale a prezzo pieno e rafforzano la fidelizzazione.
-a4b3e7d0cc	Prezzi &amp; sconti
+a4b3e7d0cc	Prezzi & sconti
 792fe4aaaf	Margine
 9678914583	Segue margine e sell-through per prodotto e confronta tempistica e profondità degli sconti possibili.
 af7d8ffe76	Quando mantenere un prezzo, quando scontare e di quanto.
@@ -443,7 +443,7 @@ af7d8ffe76	Quando mantenere un prezzo, quando scontare e di quanto.
 821e96faef	Organizza il team per negozio e ruolo, con attività, obiettivi e permessi.
 1de891db2a	Chi fa che cosa, chi può approvare che cosa e dove il team ha bisogno di supporto.
 c55f504668	Responsabilità chiare e meno tempo perso nel coordinamento manuale.
-74faed3940	Pianificazione &amp; riassortimento
+74faed3940	Pianificazione & riassortimento
 4be8855634	Domanda e consegne
 1103d637d0	Collega domanda, consegne e riassortimento in un unico piano per negozio e per stagione.
 c6efaed4b5	Che cosa riordinare, trasferire o trattenere, e quando devono arrivare le consegne.
@@ -501,3 +501,4 @@ a9dddda872	Come aiuta l’intelligenza di ORVUM
 f9cbb15540	Su orvum.com questo apre il modulo di richiesta (/contact). Questa anteprima non invia nulla.
 31bc4ae577	Su orvum.com questo apre la pagina della piattaforma (/platform). Questa anteprima resta su un’unica pagina.
 ab3c245578	Su orvum.com questo apre l’informativa sulla privacy (/privacy).
+979adad927	ORVUM — home

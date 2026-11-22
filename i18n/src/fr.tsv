@@ -416,7 +416,7 @@ d33ea1a5f4	Un budget d’achat orienté vers ce qui a des chances de se vendre, 
 f7672db6ce	Transforme les achats validés en commandes avec quantités, prix, fenêtres de livraison et conditions de paiement.
 e3d23f6ade	Ce qui est engagé, auprès de quel fournisseur, et quand la trésorerie sera nécessaire.
 f76f90ad46	Chaque engagement est visible avant de devenir un paiement.
-f75e4531ae	Réception &amp; Delivery Match
+f75e4531ae	Réception & Delivery Match
 acaf7d964f	Entrée des marchandises
 2b418d7b36	Rapproche ce qui arrive de ce qui a été commandé — article, taille, quantité et prix — avant la mise en vente.
 308656158b	Accepter, contester ou refuser une livraison, et quels écarts remonter au fournisseur.
@@ -429,12 +429,12 @@ bf01f8e213	Ventes et retours
 caa9890b80	Gère les ventes, échanges et retours en boutique et sur caisse mobile, reliés au stock, aux clients et aux équipes.
 b2899a6be9	Comment servir, échanger ou rembourser correctement — avec le bon prix et le bon enregistrement de stock.
 9d997717ae	Chaque vente et chaque retour mettent à jour une seule fois, et correctement, le stock, le dossier client et la finance.
-93585fa2eb	CRM &amp; clienteling
+93585fa2eb	CRM & clienteling
 4e23630af7	Connaissance client
 a48708de97	Construit une vue unique de chaque client — achats, tailles, préférences et consentement au contact.
 5c22438729	Quels clients contacter, pour quels produits, et quand.
 74d8b918bf	Des sollicitations pertinentes qui aident à vendre le stock actuel à plein prix et renforcent la fidélité.
-a4b3e7d0cc	Prix &amp; démarque
+a4b3e7d0cc	Prix & démarque
 792fe4aaaf	Marge
 9678914583	Suit la marge et l’écoulement par produit et compare le moment et la profondeur des démarques possibles.
 af7d8ffe76	Quand tenir un prix, quand démarquer, et de combien.
@@ -443,7 +443,7 @@ af7d8ffe76	Quand tenir un prix, quand démarquer, et de combien.
 821e96faef	Organise l’équipe par boutique et par rôle, avec des tâches, des objectifs et des droits.
 1de891db2a	Qui fait quoi, qui peut valider quoi, et où l’équipe a besoin de soutien.
 c55f504668	Des responsabilités claires et moins de temps perdu en coordination manuelle.
-74faed3940	Planification &amp; réassort
+74faed3940	Planification & réassort
 4be8855634	Demande et livraisons
 1103d637d0	Relie demande, livraisons et réassort dans un seul plan par boutique et par saison.
 c6efaed4b5	Quoi réassortir, transférer ou garder, et quand les livraisons doivent arriver.
@@ -501,3 +501,4 @@ a9dddda872	Ce qu’apporte l’intelligence d’ORVUM
 f9cbb15540	Sur orvum.com, ce bouton ouvre le formulaire de demande (/contact). Cet aperçu n’envoie rien.
 31bc4ae577	Sur orvum.com, ce bouton ouvre la page plateforme (/platform). Cet aperçu reste sur une seule page.
 ab3c245578	Sur orvum.com, ce lien ouvre la politique de confidentialité (/privacy).
+979adad927	ORVUM — accueil

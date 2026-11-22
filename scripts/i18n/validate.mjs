@@ -30,6 +30,7 @@ for (const code of codes) {
     if (t === undefined) { out.push(`missing ${k}: ${en.slice(0, 70)}`); continue; }
     if (typeof t !== 'string' || !t.trim()) { out.push(`empty ${k}`); continue; }
     if (tags(t) !== tags(en)) out.push(`markup ${k}: ${en.slice(0, 60)} ⇒ ${t.slice(0, 60)}`);
+    if (!/&amp;|</.test(en) && /&amp;/.test(t)) out.push(`entity in raw text ${k}: ${t.slice(0, 60)}`);
     if (figures(t) !== figures(en)) out.push(`figures ${k}: [${figures(en)}] vs [${figures(t)}] :: ${t.slice(0, 90)}`);
     const orv = (s) => (s.match(/ORVUM/g) || []).length;
     if (orv(t) !== orv(en)) out.push(`ORVUM count ${k}: ${orv(en)} vs ${orv(t)} :: ${t.slice(0, 80)}`);

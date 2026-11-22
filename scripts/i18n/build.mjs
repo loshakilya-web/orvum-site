@@ -52,7 +52,12 @@ const LANG_LABEL = { en: 'Language', de: 'Sprache', fr: 'Langue', it: 'Lingua', 
 const LOCALE_CSS = {
   ar: `<style id="orvum-locale-css">:root, body { --display: "IBM Plex Sans Arabic", "Manrope", "Helvetica Neue", Arial, sans-serif; --mono: "IBM Plex Sans Arabic", "JetBrains Mono", ui-monospace, monospace; }
 body { font-family: var(--display); } .eyebrow, .kicker, .k, [class*="-k"], .dk, .m-k, .gate-k { letter-spacing: 0 !important; text-transform: none !important; }
-h1, h2, h3, .claim, .lead { letter-spacing: 0 !important; }</style>`,
+h1, h2, h3, .claim, .lead { letter-spacing: 0 !important; }
+[dir="rtl"] .chain-flow li + li::before { left: auto; right: -24px; }
+[dir="rtl"] .chain-flow li + li::after { left: auto; right: -8px; border-left: 0; border-right: 6px solid var(--signal); }
+@media (max-width: 1320px) { [dir="rtl"] .chain-flow li + li::before { right: -20px; } [dir="rtl"] .chain-flow li + li::after { right: -7px; } }
+[dir="rtl"] .farrow { transform: scaleX(-1); }
+[dir="rtl"] .econ article { padding: 22px 0 6px 20px; border-right: 0; border-left: 1px solid var(--line-l); margin-right: 0; margin-left: 20px; } [dir="rtl"] .econ article:last-child { border-left: 0; margin-left: 0; }</style>`,
   zh: `<style id="orvum-locale-css">:root, body { --display: "Manrope", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", "Source Han Sans SC", sans-serif; --mono: "JetBrains Mono", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", monospace; }
 body { font-family: var(--display); } .eyebrow, .kicker, .k, [class*="-k"], .dk, .m-k, .gate-k { letter-spacing: .06em !important; }
 h1, h2, h3, .claim { letter-spacing: 0 !important; } p, li, dd { line-break: strict; }</style>`,

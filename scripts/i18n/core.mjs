@@ -33,7 +33,7 @@ export const norm = (s) => s.replace(/\s+/g, ' ').trim();
 export const id = (s) => createHash('sha1').update(norm(s)).digest('hex').slice(0, 10);
 const hasWords = (s) => /\p{L}{2,}/u.test(s.replace(/<[^>]+>/g, ' ').replace(/&[a-z]+;/g, ' '));
 // text that must stay as it is in every language
-const KEEP = new Set(['ORVUM', 'LinkedIn ↗', 'LinkedIn', 'truth@orvum.com', 'Instagram ↗', 'Instagram', 'Ilya Loshak', 'ORVUM home']);
+const KEEP = new Set(['ORVUM', 'LinkedIn ↗', 'LinkedIn', 'truth@orvum.com', 'Instagram ↗', 'Instagram', 'Ilya Loshak']);
 export const keep = (s) => KEEP.has(norm(s.replace(/<[^>]+>/g, ''))) || !hasWords(s) || /^[\w.+-]+@[\w.-]+$/.test(norm(s));
 
 function inlineOnly(el) {

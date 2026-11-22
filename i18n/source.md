@@ -580,6 +580,8 @@
   <span class="dot" aria-hidden="true"></span>ORVUM is in development. Prototypes and designs are not released functionality, and the demo on this website uses synthetic data. We will publish what is released, when it is released.
 - 9369100d11 [platform.html, about.html]
   <a class="pbtn primary" href="/contact">Contact ORVUM →</a>
+- 979adad927 [platform.html @aria-label, about.html @aria-label, contact.html @aria-label]
+  ORVUM home
 - 62bce9422f [platform.html @aria-label, about.html @aria-label, contact.html @aria-label]
   Main
 - 51bec334ef [about.html title]
