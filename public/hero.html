@@ -48,6 +48,32 @@
   html.orvum-hosted, html.orvum-hosted body { overflow: hidden !important; }
   .gl-lite .cta .btn.primary { background-color: var(--signal); }
 </style>
+<style id="orvum-laptop-fit">
+  /* owner, 22 Nov: on laptop-size desktop windows the modules, their text and the header are smaller; every module keeps
+     its description and mini chart; the long value paragraph stays for large displays only */
+  @media (min-width: 1100px) and (max-width: 1919px), (min-width: 1100px) and (max-height: 1000px) {
+    .lockup { height: clamp(26px, 2.6vw, 38px); }
+    .top { gap: 10px; top: calc(20px + env(safe-area-inset-top, 0px)); }
+    .kicker { font-size: clamp(11px, .85vw, 13px); }
+    .signature { font-size: clamp(11px, .8vw, 12.5px); }
+    .card { width: clamp(236px, 17vw, 290px); padding: 10px 12px; grid-template-columns: 22px minmax(0, 1fr) auto; gap: 1px 10px; border-radius: 13px; }
+    .card.pair { width: clamp(228px, 16.4vw, 280px); }
+    .card .ic { width: 21px; height: 21px; }
+    .card h3 { font-size: 14px; }
+    .card .sub { font-size: 10.5px; line-height: 1.35; margin-top: 2px; }
+    .card .viz { width: 62px; height: 26px; }
+    .card .planned { transform: scale(.85); transform-origin: left center; }
+    .claim { font-size: clamp(24px, 2.3vw, 36px); }
+    .purpose { font-size: clamp(13px, .95vw, 15px); }
+    .maturity { font-size: 11px; }
+    .purpose-more { display: none; }
+    .card .sub, .card .viz { display: block; }
+    .focusing .card .sub, .focusing .card .viz { display: none; }
+  }
+  @media (min-width: 1100px) and (max-height: 799px) {
+    .card { padding: 7px 11px; } .card .sub { font-size: 10px; line-height: 1.3; } .card .viz { width: 54px; height: 22px; }
+  }
+</style>
 </head>
 <body>
 
@@ -80,7 +106,7 @@
   </footer>
 
   <div class="grid" id="cards">
-    <article class="card accent wide" data-k="agents" data-x="50" data-y="24">
+    <article class="card accent wide" data-k="agents" data-x="50" data-y="20.5">
       <button type="button" class="hit" aria-expanded="false" aria-controls="decision" aria-label="AI Agents: open the decision"></button>
       <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.1 7.4 7.4 2.1-7.4 2.1-2.1 7.4-2.1-7.4-7.4-2.1 7.4-2.1z"/></svg></div>
       <div><h3>AI Agents</h3><p class="sub">Explain · Recommend · Act with approval</p></div><div class="viz" aria-hidden="true"><svg viewBox="0 0 84 36"><rect class="fo" x="4" y="4" width="5" height="28" rx="1"/><rect class="fo" x="13" y="8" width="5" height="24" rx="1"/><rect class="fo" x="22" y="11" width="5" height="21" rx="1"/><rect class="f" x="31" y="14" width="5" height="18" rx="1"/><rect class="f" x="40" y="16" width="5" height="16" rx="1"/><rect class="f" x="49" y="19" width="5" height="13" rx="1"/><rect class="f" x="58" y="21" width="5" height="11" rx="1"/><rect class="f" x="67" y="23" width="5" height="9" rx="1"/><rect class="f" x="76" y="25" width="5" height="7" rx="1"/></svg></div>

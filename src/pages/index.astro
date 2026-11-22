@@ -50,6 +50,14 @@ const jsonld = {
   jsonld={jsonld}
   css={['/site/v5/orvum-public.css', '/site/v5/orvum-public-2.css', '/site/v5/orvum-public-3.css']}
 >
+<Fragment slot="head"><style is:inline id="orvum-laptop-fit">
+  /* owner, 22 Nov: laptop windows show the page below the hero at 86%, in the same column as the menu */
+  @media (min-width: 1100px) and (max-width: 1919px) and (max-height: 1050px) {
+    main, .pfoot { zoom: .86; }
+    main .wrap, .pfoot .wrap { max-width: calc(1240px / .86); padding: 0 calc(28px / .86); }
+    .sec { padding: clamp(56px, 8vh, 88px) 0; }
+  }
+</style></Fragment>
 <a class="skip" href="#decision">Skip to content</a>
 
 <h1 class="vh">ORVUM — The Intelligence Core for Retail</h1>
