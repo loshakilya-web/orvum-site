@@ -1,22 +1,5 @@
-// Tools and glossary content (Site Brief #2, texts approved by the owner 18 Nov 2026; currency EUR).
+// Glossary content (Site Brief #2, texts approved by the owner 18 Nov 2026; currency EUR).
 // Every figure in an example is illustrative and was recalculated in code.
-
-export const TOOLS = [
-  {
-    slug: 'open-to-buy-calculator',
-    name: 'Open-to-Buy Calculator',
-    short: 'Open-to-buy for one month or a full season, from planned sales, reductions, stock and orders already placed.',
-    title: 'Open-to-Buy Calculator — Monthly and Seasonal OTB',
-    description: 'Calculate open-to-buy for a month or a full season: planned sales, reductions, stock and orders on order. Free, with formula and example.',
-  },
-  {
-    slug: 'sell-through-calculator',
-    name: 'Sell-Through Rate Calculator',
-    short: 'Sell-through rate, weekly selling pace and weeks of supply, in units or value.',
-    title: 'Sell-Through Rate Calculator — With Weeks of Supply',
-    description: 'Calculate sell-through rate, weekly selling pace and weeks of supply in units or value. Free, with both formulas and a worked example.',
-  },
-];
 
 export const TERMS = [
   {
@@ -31,7 +14,7 @@ export const TERMS = [
     body: [
       'In multi-brand retail, open-to-buy is usually planned by brand and category, because most of the season is committed at order appointments months in advance. A negative open-to-buy means the retailer is over-bought for that period. Open-to-buy is a planning figure, not a cash budget or an approval to spend.',
     ],
-    related: [['sell-through-rate'], ['weeks-of-supply'], ['tool', 'open-to-buy-calculator']],
+    related: [['sell-through-rate'], ['weeks-of-supply']],
   },
   {
     slug: 'sell-through-rate',
@@ -45,7 +28,7 @@ export const TERMS = [
     body: [
       'Sell-through is compared across brands and categories at the same point in the season to decide on re-orders, transfers and markdowns. Always state which version of the formula a number uses.',
     ],
-    related: [['open-to-buy'], ['weeks-of-supply'], ['inventory-turnover'], ['tool', 'sell-through-calculator']],
+    related: [['open-to-buy'], ['weeks-of-supply'], ['inventory-turnover']],
   },
   {
     slug: 'gmroi',
@@ -73,7 +56,7 @@ export const TERMS = [
     body: [
       'Weeks of supply is most useful when compared with the weeks left in the selling season: much more supply than weeks left points to markdown risk; much less points to a re-order or a lost-sales risk.',
     ],
-    related: [['sell-through-rate'], ['open-to-buy'], ['tool', 'sell-through-calculator']],
+    related: [['sell-through-rate'], ['open-to-buy']],
   },
   {
     slug: 'inventory-turnover',
@@ -107,7 +90,6 @@ export const TERMS = [
 ];
 
 export function relatedLink(r) {
-  if (r[0] === 'tool') { const t = TOOLS.find((x) => x.slug === r[1]); return { href: `/tools/${t.slug}`, label: t.name }; }
   if (r[0] === 'platform') return { href: '/platform', label: 'The ORVUM platform' };
   const t = TERMS.find((x) => x.slug === r[0]);
   return { href: `/glossary/${t.slug}`, label: t.name };

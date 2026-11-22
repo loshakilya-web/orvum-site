@@ -4,7 +4,7 @@ import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import Crumbs from '../../components/Crumbs.astro';
 import { SITE } from '../../site.mjs';
-import { TERMS, TOOLS } from '../../learn.mjs';
+import { TERMS } from '../../learn.mjs';
 const url = `${SITE}/glossary`;
 const jsonld = {
   '@context': 'https://schema.org',
@@ -54,7 +54,6 @@ const jsonld = {
   <div class="wrap">
     <h2 id="terms-h" class="vh">Terms</h2>
     <ul class="cards">{TERMS.map((t) => <li><a href={`/glossary/${t.slug}`}><h3>{t.name}</h3><p>{t.definition}</p></a></li>)}</ul>
-    <p class="note">Calculators: {TOOLS.map((x, i) => <>{i > 0 && ' · '}<a href={`/tools/${x.slug}`}>{x.name}</a></>)}</p>
   </div>
 </section>
 </main>

@@ -10,7 +10,6 @@ Status: in development. Prototypes and product designs shown on the website are 
 - [Platform](https://www.orvum.com/platform): scope, design principles and development status
 - [About](https://www.orvum.com/about): the company and its founder
 - [Contact](https://www.orvum.com/contact): how to reach ORVUM
-- [Retail calculators](https://www.orvum.com/tools): free open-to-buy and sell-through calculators that run in the browser
 - [Retail metrics glossary](https://www.orvum.com/glossary): open-to-buy, sell-through rate, GMROI, weeks of supply, inventory turnover, clienteling
 
 ## Optional
