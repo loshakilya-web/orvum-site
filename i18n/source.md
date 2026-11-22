@@ -16,7 +16,7 @@
   ORVUM — The Intelligence Core for Retail
 - cf4d11458d [index.html]
   ORVUM is an AI-native retail operating system in development, designed for retailers and the brands they work with.
-- 57f5f5efbc [index.html, platform.html, about.html, contact.html, 404.html]
+- 57f5f5efbc [index.html, platform.html, about.html, contact.html]
   Menu
 - 7f59a1f1d5 [index.html, hero.html @aria-label]
   Decision
@@ -464,11 +464,11 @@
   Cyprus, in the European Union. ORVUM is designed for retailers and brands in any market.
 - f68d1ea7fa [index.html]
   ORVUM is in development. Modules, figures and examples shown on this website are illustrative; the demo uses synthetic data only. We do not publish customer, revenue or ROI figures because we do not have released, measured results to report.
-- d46517b7e5 [index.html, platform.html, about.html, contact.html, 404.html]
+- d46517b7e5 [index.html, platform.html, about.html, contact.html]
   <img src="/site/brand/favicon.svg" alt="" width="24" height="24"><span>ORVUM</span> — The AI-native retail operating system
-- 21f245a594 [index.html, platform.html, about.html, contact.html, 404.html]
+- 21f245a594 [index.html, platform.html, about.html, contact.html]
   ORVUM is in development. Modules, figures and examples on this site are illustrative.
-- e60603a57c [index.html, platform.html, about.html, contact.html, 404.html]
+- e60603a57c [index.html, platform.html, about.html, contact.html]
   <a href="/">Home</a><a href="/platform">Platform</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="https://www.linkedin.com/company/orvum/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><span>© 2026 ORVUM</span>
 - 2d38c58b76 [index.html @aria-label]
   ORVUM — back to top
@@ -580,7 +580,7 @@
   <span class="dot" aria-hidden="true"></span>ORVUM is in development. Prototypes and designs are not released functionality, and the demo on this website uses synthetic data. We will publish what is released, when it is released.
 - 9369100d11 [platform.html, about.html]
   <a class="pbtn primary" href="/contact">Contact ORVUM →</a>
-- 62bce9422f [platform.html @aria-label, about.html @aria-label, contact.html @aria-label, 404.html @aria-label]
+- 62bce9422f [platform.html @aria-label, about.html @aria-label, contact.html @aria-label]
   Main
 - 51bec334ef [about.html title]
   About ORVUM — Founded by a Luxury Retail Operator
@@ -628,18 +628,6 @@
   <a class="pbtn primary" href="mailto:truth@orvum.com">Write to truth@orvum.com</a> <a class="pbtn" href="https://www.linkedin.com/company/orvum/" target="_blank" rel="noopener noreferrer">Message ORVUM on LinkedIn ↗</a>
 - bfe55d6402 [contact.html @aria-label]
   Ways to reach ORVUM
-- 80aa4884cd [404.html title, 404.html meta]
-  Page not found · ORVUM
-- 9a93535e39 [404.html meta]
-  This page does not exist on the ORVUM website.
-- bc7a295dcb [404.html]
-  <a href="/">Home</a> <a href="/platform">Platform</a><a href="/about">About</a> <a class="pnav-cta" href="/contact">Contact</a>
-- bc3023b360 [404.html]
-  Page not found
-- fca6739db1 [404.html]
-  This page does not exist. The pages below will take you where you need to go.
-- 5682fbe127 [404.html]
-  <a class="pbtn primary" href="/">Home</a><a class="pbtn" href="/platform">Platform</a><a class="pbtn" href="/about">About</a><a class="pbtn" href="/contact">Contact</a>
 - 66b7b62ed1 [hero.html meta]
   ORVUM is the AI-native retail operating system: one intelligence core that connects sales, buying, inventory, customers and finance for retailers and brands.
 - 54aacb4ab7 [hero.html meta]

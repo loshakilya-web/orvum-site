@@ -8,6 +8,7 @@ function add(text, where) {
   const k = id(n); if (!seen.has(k)) { seen.set(k, { en: n, where: [where] }); order.push(k); } else if (!seen.get(k).where.includes(where)) seen.get(k).where.push(where);
 }
 for (const p of PAGES) {
+  if (p.file === '404.html') continue; // one shared 404 page, in English
   const root = parsePage(readFileSync(`dist/${p.file}`, 'utf8'));
   const t = root.querySelector('title'); if (t) add(t.innerHTML, p.file + ' title');
   for (const m of root.querySelectorAll('meta')) { const k = m.getAttribute('name') || m.getAttribute('property'); if (META.includes(k)) add(m.getAttribute('content') || '', `${p.file} meta`); }
