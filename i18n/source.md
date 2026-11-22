@@ -1,11 +1,7 @@
-- c944f45018 [index.html title, index.html json-ld, hero.html title, hero.html meta]
-  ORVUM — The AI-Native Retail Operating System
-- 03a10d15d6 [index.html meta, index.html json-ld]
-  ORVUM is an AI-native retail operating system in development: buying, inventory, POS, clienteling and finance in one layer, for retailers and brands.
-- b8a76d9a11 [index.html meta]
-  ORVUM — AI-Native Retail Operating System
-- b8533b3072 [index.html meta]
-  One intelligence layer for buying, inventory, POS, clienteling and finance — for retailers and the brands they work with. In development.
+- 2dcbf8e3e6 [index.html title, index.html meta, index.html json-ld]
+  ORVUM — The AI Operating System for Retail
+- 8a7549b5f0 [index.html meta, index.html json-ld]
+  AI-native retail operating system in development: one intelligence across buying, inventory, stores, clients and finance, with people approving every decision.
 - fcf8e7a675 [index.html json-ld]
   ORVUM is an AI-native retail operating system in development for retailers and the brands they work with.
 - 631a003d1b [index.html json-ld]
@@ -406,8 +402,8 @@
   ORVUM was founded by Ilya Loshak, who has spent years operating luxury fashion retail — buying collections, running stores, and answering for stock, margin and cash.
 - 939f26a329 [index.html]
   In that work, the decisions that mattered most were the ones no single system could see whole: what to buy, where stock should be, when to change a price, and what each choice would do to cash.
-- 98e83ce541 [index.html]
-  It is designed for the wider retail market — independent retailers, retail groups and the brands they work with.
+- 2cbe4b6d7c [index.html]
+  ORVUM is designed for the wider retail market — independent retailers, retail groups and the brands they work with.
 - 4c578d1a65 [index.html]
   Ilya Loshak <span>Founder, ORVUM</span>
 - bda5ef177c [index.html]
@@ -630,6 +626,8 @@
   <a class="pbtn primary" href="mailto:truth@orvum.com">Write to truth@orvum.com</a> <a class="pbtn" href="https://www.linkedin.com/company/orvum/" target="_blank" rel="noopener noreferrer">Message ORVUM on LinkedIn ↗</a>
 - bfe55d6402 [contact.html @aria-label]
   Ways to reach ORVUM
+- c944f45018 [hero.html title, hero.html meta]
+  ORVUM — The AI-Native Retail Operating System
 - 66b7b62ed1 [hero.html meta]
   ORVUM is the AI-native retail operating system: one intelligence core that connects sales, buying, inventory, customers and finance for retailers and brands.
 - 54aacb4ab7 [hero.html meta]
