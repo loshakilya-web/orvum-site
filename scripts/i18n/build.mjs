@@ -132,7 +132,7 @@ for (const page of PAGES) {
     }
     for (const el of body.querySelectorAll('*')) for (const a of ATTRS) { if (el.closest && el.closest('details.lang')) continue; const v = el.getAttribute(a); if (v) el.setAttribute(a, tr(dict, L.code, v, page.file + ' @' + a).replace(/<[^>]+>/g, '')); }
     // links, the hero frame and the translated scripts
-    for (const a of root.querySelectorAll('a[href]')) a.setAttribute('href', localHref(a.getAttribute('href'), L.code));
+    for (const a of root.querySelectorAll('a[href]')) if (!a.closest('details.lang')) a.setAttribute('href', localHref(a.getAttribute('href'), L.code));
     for (const f of root.querySelectorAll('iframe[src]')) f.setAttribute('src', localHref(f.getAttribute('src'), L.code));
     for (const s of root.querySelectorAll('script[src]')) { const j = jsFileFor(s.getAttribute('src'), L.code); if (j) s.setAttribute('src', j); }
     const out = page.file === 'index.html' ? `dist/${L.code}/index.html` : `dist/${L.code}/${page.file}`;
