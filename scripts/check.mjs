@@ -2,7 +2,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 const S = 'https://www.orvum.com';
 const pages = {
-  '/': { file: 'index.html', title: 'ORVUM — The AI-Native Retail Operating System', h1: 'ORVUM — The Intelligence Core for Retail', must: ['One operating system for the whole retail chain', 'What is ORVUM?', 'Where is ORVUM based?'] },
+  '/': { file: 'index.html', title: 'ORVUM — The AI Operating System for Retail', h1: 'ORVUM — The Intelligence Core for Retail', must: ['One operating system for the whole retail chain', 'What is ORVUM?', 'Where is ORVUM based?'] },
   '/platform': { file: 'platform.html', title: 'ORVUM Platform — Retail Buying, Inventory, POS & Finance', h1: 'The ORVUM platform', must: ['The problem: retail runs on disconnected systems', 'Design principles', 'Development status', 'One product master.'] },
   '/about': { file: 'about.html', title: 'About ORVUM — Founded by a Luxury Retail Operator', h1: 'About ORVUM', must: ['Why we are building ORVUM', 'How we build', 'An operator, not a consultant'] },
   '/contact': { file: 'contact.html', title: 'Contact ORVUM', h1: 'Contact ORVUM', must: ['truth@orvum.com', 'linkedin.com/company/orvum', 'Cyprus'] },
