@@ -18,12 +18,12 @@ b37456c453	Contacto
 396a37ed0a	<span>01</span> Cómo se toma una decisión <em class="tagx">Ejemplo</em>
 710eba51e8	Lo que ORVUM pone sobre la mesa del propietario.
 a8ede47bf0	La temporada se decide en tres momentos: lo que pide en el showroom, qué mercancía lista paga primero y cómo mantiene el margen del stock que ya tiene en almacén.
-8b2e39d906	<span class="dtab-k">01A · Showroom</span><span class="dtab-n">Presupuesto de compra &amp; plan de temporada con la marca</span>
-427c22e983	<span class="dtab-k">01B · Entregas</span><span class="dtab-n">Mercancía por liberar &amp; caja</span>
-ea1a5339bf	<span class="dtab-k">01C · En temporada</span><span class="dtab-n">Stock parado &amp; margen</span>
+8b2e39d906	<span class="dtab-k">01A · Showroom</span><span class="dtab-n">Presupuesto de compra y plan de temporada con la marca</span>
+427c22e983	<span class="dtab-k">01B · Entregas</span><span class="dtab-n">Mercancía por liberar y caja</span>
+ea1a5339bf	<span class="dtab-k">01C · En temporada</span><span class="dtab-n">Stock parado y margen</span>
 f382243f63	01A · Antes de la temporada · Ejemplo
 8b5d935251	Una marca clave pide un 15 % más de presupuesto (480.000 € → 552.000 €), con un 35 % del pedido en ropa de temporada (RTW).
-b2b5a07e07	<span>ORVUM · Presupuesto de compra · para aprobar</span><span class="dcard-own">Para el propietario &amp; dirección de compras</span>
+b2b5a07e07	<span>ORVUM · Presupuesto de compra · para aprobar</span><span class="dcard-own">Para el propietario y dirección de compras</span>
 842daf65fa	Mantener el presupuesto total. Cambiar el reparto en esta marca.
 82784c0f30	<span>Presupuesto de la marca (OTB)</span> <strong>480.000 € → 420.000 € (−12,5 %)</strong>
 49024fbf8b	<span>Ropa de temporada</span> <strong>del 35 % al 18 % del pedido</strong>
@@ -34,7 +34,7 @@ dda64662c9	<b>Compras</b> <span class="dfig">del 68 % al 41 %</span> ha bajado e
 223233a7ca	<b>CRM</b> <span class="dfig">19 de 34 clientes VIP</span> compran ahora en otras dos tiendas
 dbe78db753	<b>Precios</b> <span class="dfig">29 % frente al 62 % previsto</span> de margen bruto real en ropa de temporada
 c7cd5ed53d	<b>Finanzas</b> <span class="dfig">agujero de caja de 110.000 € en octubre</span> si se acepta el pedido mayor
-05994ffe13	Alternativas, consecuencias &amp; plan de temporada con la marca
+05994ffe13	Alternativas, consecuencias y plan de temporada con la marca
 cbd8ff391a	Más datos
 0fcaaec609	<b>Categorías</b>El reparto por categorías del plan no ha cambiado, aunque la ropa se vende cada vez peor.
 dc78099cbf	<b>Clientes VIP</b>De los 34 que hace dos años compraban looks completos de esta marca, los 15 que quedan siguen comprando su calzado y su punto a precio completo, pero sus vestidos de temporada solo en rebajas.
@@ -57,23 +57,23 @@ e5fc754602	450.000 € · ropa 25 %, si la marca prefiere un surtido más amplio
 b95ef75a69	Objetivo común
 3f1bc695a1	Cuanta más colección se venda a precio completo, mejor para la imagen de la marca y para el margen de la tienda. Sus pantalones en XS y L acabaron en rebajas tres temporadas seguidas, mientras el calzado en 38–40 pierde ventas por falta de stock. Con el reparto actual, cerca del 45 % de la colección terminaría la temporada en el burro de rebajas.
 b33e603694	Una vez aprobado, se bloquea el límite de compra, se prepara el briefing para la reunión con la marca y se actualiza en finanzas la caja ya comprometida.
-3968a6c16e	Aprobar el presupuesto &amp; preparar el briefing
+3968a6c16e	Aprobar el presupuesto y preparar el briefing
 10af0c9560	Cambiar el reparto
 2b03b59293	Rechazar
 ee33c12c54	Es solo una vista previa: aquí no se aprueba nada.
 7474ddd61f	01B · Entregas · Ejemplo
 5c72cb1d44	Tres proveedores esperan el pago de 310.000 € en mercancía lista (a coste). Esta semana hay 140.000 € disponibles.
-49202787f8	<span>ORVUM · Orden de liberación de mercancía · para aprobar</span><span class="dcard-own">Para el propietario, compras &amp; finanzas</span>
+49202787f8	<span>ORVUM · Orden de liberación de mercancía · para aprobar</span><span class="dcard-own">Para el propietario, compras y finanzas</span>
 3e476b685c	Hoy se libera lo que se vende rápido. Los abrigos de invierno pueden esperar.
-09595af888	<span>Pagar &amp; liberar hoy</span> <strong>Entrega B · 82.000 € a coste · calzado de entretiempo y denim</strong>
-ac3349670c	<span>Pagar &amp; liberar hoy</span> <strong>Parte del lote A1 · 58.000 € a coste · punto de fondo de armario</strong>
+09595af888	<span>Pagar y liberar hoy</span> <strong>Entrega B · 82.000 € a coste · calzado de entretiempo y denim</strong>
+ac3349670c	<span>Pagar y liberar hoy</span> <strong>Parte del lote A1 · 58.000 € a coste · punto de fondo de armario</strong>
 13c43145be	<span>En la próxima ronda</span> <strong>Resto del lote A1 · 55.000 € a coste · punto en tallas que ya hay en tienda</strong>
 d700ca69ee	<span>Esperar 18 días</span> <strong>Entrega C · 115.000 € a coste · abrigos de invierno</strong>
-f75ff4965b	<b>Tiendas &amp; caja</b> <span class="dfig">≈ 14.000 € de ventas perdidas por semana</span> por no tener calzado de entretiempo del 38 al 41
+f75ff4965b	<b>Tiendas y caja</b> <span class="dfig">≈ 14.000 € de ventas perdidas por semana</span> por no tener calzado de entretiempo del 38 al 41
 86b13be38f	<b>CRM</b> <span class="dfig">29 clientes VIP esperando</span> prendas de la entrega B y del lote A1
 9fb50dbddd	<b>Stock</b> <span class="dfig">abrigos para 6,5 semanas de venta</span> no empezarán a venderse hasta mediados del mes que viene
 114e65064f	<b>Finanzas</b> <span class="dfig">105.000 € de vuelta en 18 días</span> netos, de la entrega B + el lote A1
-883d1ff1e3	Alternativas &amp; consecuencias
+883d1ff1e3	Alternativas y consecuencias
 95f890fe70	<b>Clienteling</b>Las prendas reservadas ya tienen citas con clientes el día que llegan, así que la colección se vende antes a precio completo.
 e3855c3344	<b>Dinero en abrigos</b>Pagar hoy 115.000 € es dejar ese dinero colgado más de 40 días. La entrega C se queda en el almacén del proveedor; se paga el día 18.
 2d7e43fff9	<b>Caja neta</b>La previsión de caja disponible tiene en cuenta el IVA, los plazos de abono de los pagos con tarjeta y los compromisos ya reservados de las tiendas. Las liberaciones prioritarias deben cubrir la mayor parte de la entrega C; si queda diferencia, antes de aprobar hacen falta fondos disponibles confirmados o un acuerdo con el proveedor.
@@ -86,7 +86,7 @@ ff146ad6fb	En 18 días esperamos 105.000 € de caja neta disponible (sin IVA, y
 6f76bb2b12	Proveedores
 5d9dd9dfa1	Plazos de pago y envío dentro de lo que permite el contrato
 2e828b165b	Una vez aprobado, finanzas programa el pago de la entrega B y del lote A1, recepción prepara su entrada con prioridad y la entrega C queda provisionalmente para el día 18 — siempre que los 115.000 € estén cobrados antes del vencimiento o se hayan acordado otras condiciones.
-563ea001ed	Confirmar pago &amp; orden de liberación
+563ea001ed	Confirmar pago y orden de liberación
 f0386f1ad3	Cambiar importes
 ca13fcf9c4	01C · En plena temporada · Ejemplo
 c32df6757b	Mitad de temporada, ventas por debajo del plan: en una tienda el stock está parado, en otra faltan tallas, y se acerca un pago a un proveedor.
@@ -95,8 +95,8 @@ c32df6757b	Mitad de temporada, ventas por debajo del plan: en una tienda el stoc
 4bc9480bff	<span>Punto de otoño</span> <strong>aguantar el precio dos semanas más</strong>
 4390aa9016	<span>Traspasar</span> <strong>18 prendas en M–L · de la tienda 3 a la tienda 7</strong>
 289917430f	<span>Invitar</span> <strong>a 11 clientes habituales de esta marca</strong>
-a1c8b2b171	<b>Ventas &amp; stock</b> <span class="dfig">9 % por debajo del plan</span> casi todo el punto sin vender está en la tienda 3
-ca8678fa85	<b>Tiendas &amp; caja</b> <span class="dfig">23 veces lo pidieron y no había</span> tallas M–L en la tienda 7 en tres semanas
+a1c8b2b171	<b>Ventas y stock</b> <span class="dfig">9 % por debajo del plan</span> casi todo el punto sin vender está en la tienda 3
+ca8678fa85	<b>Tiendas y caja</b> <span class="dfig">23 veces lo pidieron y no había</span> tallas M–L en la tienda 7 en tres semanas
 79c4c012e1	<b>CRM</b> <span class="dfig">11 clientes a los que escribir</span> compraron esta marca en M–L la temporada pasada
 d0e3b98959	<b>Finanzas</b> <span class="dfig">pago dentro de 19 días</span> el plan lo sigue cubriendo
 c493e060e7	<b>Rebajar ya un 30 %</b>El stock sale antes, pero se regala margen en un punto que todavía se pide.
@@ -112,9 +112,9 @@ c27b1395a3	<strong>Por qué un solo sistema:</strong> cada una de estas recomend
 962d4109d6	Cómo llega ORVUM a una decisión, en 4 pasos
 96f2715167	<span>1</span> Los datos
 d39e41413a	Lo que ORVUM reúne
-9e02cb9581	<b>Stock &amp; ventas</b> por tienda, talla y temporada: qué stock está parado y dónde.
+9e02cb9581	<b>Stock y ventas</b> por tienda, talla y temporada: qué stock está parado y dónde.
 2eb6bfa0bb	<b>Demanda</b>: qué clientes compran esta categoría y qué tallas no encuentran.
-4db8493acb	<b>Recepción &amp; compromisos</b>: qué ha llegado, qué ha señalado Delivery Match, qué pedidos siguen abiertos.
+4db8493acb	<b>Recepción y compromisos</b>: qué ha llegado, qué ha señalado Delivery Match, qué pedidos siguen abiertos.
 46ff38ecfc	<b>Pagos</b>: qué hay que pagar a proveedores y cuándo, frente a las ventas previstas.
 c102680bf9	<span>2</span> Las opciones
 c9897416bf	Qué se puede hacer
@@ -127,7 +127,7 @@ b658edd562	Elegir el momento de la rebaja
 758f0cfe06	Pagos
 b4fae0d7a6	Margen bruto previsto
 11e2822621	Capital circulante
-b202a15ec9	<span>4</span> Aprobación &amp; resultado
+b202a15ec9	<span>4</span> Aprobación y resultado
 fe183c03e5	Deciden las personas. Los resultados se comprueban.
 81eeb47448	<b>Aprobación humana</b>: el responsable aprueba, cambia o rechaza. Sin aprobación no se ejecuta nada, y siempre dentro de sus atribuciones.
 4ede1e619a	<b>Historial</b>: quién aprobó qué, cuándo y con qué datos.
@@ -155,7 +155,7 @@ f0fe878c4f	Explica qué pasa · propone opciones con sus consecuencias · solo a
 3dcd149815	<span class="n">Pedidos a proveedores</span><span class="d">Compromisos y condiciones</span>
 352bee2271	<span class="n">Recepción</span><span class="d">Delivery Match</span>
 e609af4ffc	<span class="n">Stock</span><span class="d">Por tienda, talla y antigüedad</span>
-92321d9300	<span class="n">Ventas &amp; devoluciones</span><span class="d">Tiendas y caja móvil</span>
+92321d9300	<span class="n">Ventas y devoluciones</span><span class="d">Tiendas y caja móvil</span>
 a5e84683e5	<span class="n">Clientes</span><span class="d">Conocimiento del cliente y clienteling</span>
 67be170611	Común a toda la cadena
 a0d9bbad5f	Precios
@@ -240,7 +240,7 @@ fa038702cd	Qué enseña esta web
 1dba6aa165	Cómo conecta ORVUM la cadena del retail
 883c565959	El recorrido de la mercancía y del dinero
 143c0f0ece	Módulos
-1012a372bb	Plataforma ORVUM — Compras, inventario, caja &amp; finanzas
+1012a372bb	Plataforma ORVUM — Compras, inventario, caja y finanzas
 52aa1aab1c	Cómo está pensado ORVUM: una sola ficha por artículo, cifras con su origen y aprobación del propietario en compras, stock, caja, clienteling y finanzas. En desarrollo.
 7103cca971	La plataforma ORVUM
 c03c9294c2	Una sola capa inteligente sobre todo el negocio, para retailers y las marcas con las que trabajan. En desarrollo.
@@ -324,7 +324,7 @@ c493babc69	Agentes de IA
 4ae5774625	Demanda · Presupuesto de compra · Mejores decisiones
 300d29fd5f	Stock
 450448d6b5	Stock fiable · Disponibilidad · Capital liberado
-b64d539f0f	Tiendas &amp; caja
+b64d539f0f	Tiendas y caja
 a356672660	Ventas · Devoluciones · Todo conectado
 40481b0367	Equipo · Tareas · Permisos
 c480a45792	Margen · Cuándo rebajar · Valor recuperado
@@ -341,7 +341,7 @@ ce5be5a761	Ver otra vez la animación del logotipo
 593a30214e	Agentes de IA: abrir la decisión
 1919056dc0	Compras: abrir la decisión
 d620aacf78	Stock: abrir la decisión
-5c35e64223	Tiendas & caja: abrir la decisión
+5c35e64223	Tiendas y caja: abrir la decisión
 220c6549d4	Equipo: abrir la decisión
 4269f89af5	Precios: abrir la decisión
 939555e2b7	CRM: abrir la decisión
@@ -361,7 +361,7 @@ d2bc81062c	Una foto fiable del stock, por tienda, talla y antigüedad.
 0b52ed2fb8	Encuentra dónde no encajan stock y demanda
 cd78499b21	Detecta pronto el stock que envejece, mientras aún se puede vender a precio completo
 40b06f980d	Enseña cuánto dinero está parado en stock y cómo recuperarlo
-b9ff0d1042	Tiendas & caja
+b9ff0d1042	Tiendas y caja
 f47386cb4d	Ventas y devoluciones en tienda y fuera de ella, conectadas al momento con stock, clientes y finanzas.
 6d9529366c	Cada venta y cada devolución actualizan una sola vez el stock, la ficha del cliente y las finanzas
 38ae1a6464	El dependiente ve al instante las tallas y el historial de compras del cliente
@@ -411,7 +411,7 @@ d33ea1a5f4	El presupuesto va a lo que tiene más opciones de venderse, y menos a
 f7672db6ce	Convierte las compras aprobadas en pedidos: cantidades, precios, plazos de entrega y condiciones de pago.
 e3d23f6ade	Qué se ha pedido, a qué proveedor y cuándo hará falta el dinero.
 f76f90ad46	Cada compromiso se ve antes de convertirse en un pago.
-f75e4531ae	Recepción & Delivery Match
+f75e4531ae	Recepción y Delivery Match
 acaf7d964f	Entrada de mercancía
 2b418d7b36	Compara lo que llega con lo que se pidió — artículo, talla, cantidad y precio — antes de que la mercancía salga a la venta.
 308656158b	Si aceptar, reclamar o rechazar una entrega, y qué diferencias aclarar con el proveedor.
@@ -424,12 +424,12 @@ bf01f8e213	Ventas y devoluciones
 caa9890b80	Ventas, cambios y devoluciones en tienda y en caja móvil, conectados con stock, clientes y personal.
 b2899a6be9	Cómo vender, cambiar o devolver bien: al precio correcto y con el movimiento de stock correcto.
 9d997717ae	Cada venta y cada devolución actualizan una sola vez — y bien — el stock, la ficha del cliente y las finanzas.
-93585fa2eb	CRM & clienteling
+93585fa2eb	CRM y clienteling
 4e23630af7	Conocer al cliente
 a48708de97	Todo sobre cada cliente en un mismo sitio: compras, tallas, preferencias y permiso para contactarle.
 5c22438729	A qué clientes escribir, sobre qué prendas y cuándo.
 74d8b918bf	Contactos oportunos que ayudan a vender el stock de temporada a precio completo y a fidelizar.
-a4b3e7d0cc	Precios & rebajas
+a4b3e7d0cc	Precios y rebajas
 792fe4aaaf	Margen
 9678914583	Sigue el margen y el sell-through por artículo y compara el momento y la profundidad de las posibles rebajas.
 af7d8ffe76	Cuándo aguantar un precio, cuándo rebajar y cuánto.
@@ -438,7 +438,7 @@ af7d8ffe76	Cuándo aguantar un precio, cuándo rebajar y cuánto.
 821e96faef	Organiza el equipo por tienda y puesto, con tareas, objetivos y permisos.
 1de891db2a	Quién hace qué, quién puede aprobar qué y dónde necesita ayuda el equipo.
 c55f504668	Responsabilidades claras y menos tiempo perdido coordinándose a mano.
-74faed3940	Planificación & reposición
+74faed3940	Planificación y reposición
 4be8855634	Demanda y entregas
 1103d637d0	Demanda, entregas y reposición en un solo plan por tienda y temporada.
 c6efaed4b5	Qué reponer, mover o guardar, y cuándo deben llegar las entregas.
