@@ -1,0 +1,71 @@
+---
+import Base from '../../layouts/Base.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import Crumbs from '../../components/Crumbs.astro';
+import { SITE } from '../../site.mjs';
+import { TERMS, relatedLink } from '../../learn.mjs';
+
+export function getStaticPaths() {
+  return TERMS.map((t) => ({ params: { slug: t.slug }, props: { t } }));
+}
+const { t } = Astro.props;
+const url = `${SITE}/glossary/${t.slug}`;
+const jsonld = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'WebPage',
+      '@id': `${url}#webpage`,
+      url,
+      name: t.title,
+      inLanguage: 'en',
+      isPartOf: { '@id': `${SITE}/#website` },
+      mainEntity: { '@id': `${url}#term` },
+      breadcrumb: {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+          { '@type': 'ListItem', position: 2, name: 'Glossary', item: `${SITE}/glossary` },
+          { '@type': 'ListItem', position: 3, name: t.name, item: url },
+        ],
+      },
+    },
+    {
+      '@type': 'DefinedTerm',
+      '@id': `${url}#term`,
+      name: t.name,
+      description: t.definition,
+      url,
+      inDefinedTermSet: { '@id': `${SITE}/glossary#set` },
+    },
+  ],
+};
+const rel = t.related.map(relatedLink);
+---
+<Base title={t.title} description={t.description} canonical={url} jsonld={jsonld}
+  css={['/site/v5/orvum-public.css', '/site/v5/orvum-public-2.css', '/site/css/pages.css', '/site/css/learn.css']}>
+<a class="skip" href="#main">Skip to content</a>
+<Nav current="/glossary" />
+<main id="main">
+<section class="sec dark page-top" aria-labelledby="h1">
+  <div class="wrap">
+    <Crumbs items={[{ href: '/', label: 'Home' }, { href: '/glossary', label: 'Glossary' }, { label: t.name }]} />
+    <h1 id="h1">{t.heading}</h1>
+    <p class="lead">{t.definition}</p>
+  </div>
+</section>
+<section class="sec light" aria-label={`${t.name}: formula and example`}>
+  <div class="wrap prose term">
+    {t.formula && <><h2>Formula</h2><p class="formula">{t.formula}</p></>}
+    {t.example && <><h2>Example <span class="tag">illustrative</span></h2><p>{t.example}</p></>}
+    <h2>{t.formula ? 'How it is used' : 'How it works'}</h2>
+    {t.body.map((p) => <p>{p}</p>)}
+    <h2>Related</h2>
+    <ul class="rel">{rel.map((r) => <li><a href={r.href}>{r.label} →</a></li>)}</ul>
+    <p class="note">ORVUM is an AI-native retail operating system in development. <a href="/platform">See the platform →</a></p>
+  </div>
+</section>
+</main>
+<Footer />
+</Base>

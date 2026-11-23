@@ -464,8 +464,8 @@
   <img src="/site/brand/favicon.svg" alt="" width="24" height="24"><span>ORVUM</span> — The AI-native retail operating system
 - 21f245a594 [index.html, platform.html, about.html, contact.html]
   ORVUM is in development. Modules, figures and examples on this site are illustrative.
-- e60603a57c [index.html, platform.html, about.html, contact.html]
-  <a href="/">Home</a><a href="/platform">Platform</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="https://www.linkedin.com/company/orvum/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><span>© 2026 ORVUM</span>
+- 6db1694cd8 [index.html, platform.html, about.html, contact.html]
+  <a href="/">Home</a><a href="/platform">Platform</a><a href="/about">About</a><a href="/contact">Contact</a><a href="/glossary">Glossary</a><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="https://www.linkedin.com/company/orvum/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><span>© 2026 ORVUM</span>
 - 2d38c58b76 [index.html @aria-label]
   ORVUM — back to top
 - 7ff5a6dafd [index.html @aria-label]

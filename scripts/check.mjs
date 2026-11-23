@@ -8,6 +8,13 @@ const pages = {
   '/contact': { file: 'contact.html', title: 'Contact ORVUM', h1: 'Contact ORVUM', must: ['truth@orvum.com', 'linkedin.com/company/orvum', 'Cyprus'] },
   '/privacy': { file: 'privacy.html', title: 'Privacy · ORVUM', h1: 'Privacy', must: ['Vercel Web Analytics', 'ORVUM TECHNOLOGIES LTD', 'Notice version'] },
   '/terms': { file: 'terms.html', title: 'Terms of use · ORVUM', h1: 'Website terms of use', must: ['Terms version'] },
+  '/glossary': { file: 'glossary.html', title: 'Retail Metrics Glossary — Buying and Inventory Terms', h1: 'Retail metrics glossary', must: ['DefinedTermSet'] },
+  '/glossary/open-to-buy': { file: 'glossary/open-to-buy.html', title: 'Open-to-Buy (OTB): Definition, Formula and Example', h1: 'Open-to-buy (OTB)', must: ['DefinedTerm', 'open-to-buy €80,000'] },
+  '/glossary/sell-through-rate': { file: 'glossary/sell-through-rate.html', title: 'Sell-Through Rate: Definition, Formula and Example', h1: 'Sell-through rate', must: ['130 ÷ 250 = 52%'] },
+  '/glossary/gmroi': { file: 'glossary/gmroi.html', title: 'GMROI: Definition, Formula and Example for Retail', h1: 'GMROI (gross margin return on inventory investment)', must: ['GMROI of 1.5'] },
+  '/glossary/weeks-of-supply': { file: 'glossary/weeks-of-supply.html', title: 'Weeks of Supply: Definition, Formula and Example', h1: 'Weeks of supply (WOS)', must: ['15 weeks of supply'] },
+  '/glossary/inventory-turnover': { file: 'glossary/inventory-turnover.html', title: 'Inventory Turnover: Definition, Formula, Example', h1: 'Inventory turnover', must: ['turnover of 2.5'] },
+  '/glossary/clienteling': { file: 'glossary/clienteling.html', title: 'Clienteling: What It Is and How It Works in Retail', h1: 'Clienteling', must: ['GDPR'] },
 };
 let fail = 0;
 const bad = (m) => { fail++; console.log('  FAIL', m); };
@@ -49,13 +56,14 @@ const LANGS = ['de', 'fr', 'it', 'es', 'ru', 'el', 'ar', 'zh'];
 const ROUTES = ['/hero', '/', '/platform', '/about', '/contact', '/privacy', '/terms'];
 const isRoute = (u) => ROUTES.includes(u) || LANGS.some((c) => u === `/${c}` || ['/platform', '/about', '/contact', '/hero'].some((r) => u === `/${c}${r}`));
 const PAGES_ALL = ['index.html', 'platform.html', 'about.html', 'contact.html', 'privacy.html', 'terms.html', '404.html', 'hero.html',
-  ...LANGS.flatMap((c) => ['index.html', 'platform.html', 'about.html', 'contact.html', 'hero.html'].map((f) => `${c}/${f}`))];
+  ...LANGS.flatMap((c) => ['index.html', 'platform.html', 'about.html', 'contact.html', 'hero.html'].map((f) => `${c}/${f}`)),
+  ...Object.values(pages).map((p) => p.file).filter((f) => f.startsWith('glossary'))];
 for (const c of LANGS) for (const f of ['index.html', 'platform.html', 'about.html', 'contact.html', 'hero.html']) if (!existsSync(`dist/${c}/${f}`)) bad(`missing translated page ${c}/${f}`);
 for (const f of PAGES_ALL) {
   const h = readFileSync(`dist/${f}`, 'utf8');
   for (const m of h.matchAll(/(?:src|href)="(\/[^"#?]*)"/g)) {
     const u = m[1]; if (u.startsWith('/_vercel/') || isRoute(u)) continue;
-    if (!existsSync(`dist${u}`)) bad(`${f}: missing asset ${u}`);
+    if (!existsSync(`dist${u}`) && !existsSync(`dist${u}.html`)) bad(`${f}: missing asset ${u}`);
   }
 }
 console.log(fail ? `\n${fail} problem(s)` : '\nAll checks passed');
