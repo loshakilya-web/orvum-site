@@ -122,7 +122,12 @@ for (const page of PAGES) {
     for (const s of root.querySelectorAll('script[type="application/ld+json"]')) {
       const visit = (o) => { if (Array.isArray(o)) return o.forEach(visit); if (o && typeof o === 'object') for (const [k, v] of Object.entries(o)) { if (typeof v === 'string' && LD_KEYS.has(k)) o[k] = tr(dict, L.code, v, page.file + ' json-ld').replace(/<[^>]+>/g, ''); else visit(v); } };
       const data = JSON.parse(s.innerHTML); visit(data);
-      if (data['@graph']) for (const g of data['@graph']) { if (g['@type'] === 'WebPage' || g['@type'] === 'AboutPage') { g.inLanguage = L.lang; if (page.path) g.url = SITE + pathFor(L.code, page.path); } }
+      const PAGE_TYPES = ['WebPage', 'AboutPage', 'ContactPage', 'CollectionPage'];
+      for (const g of data['@graph'] || [data]) {
+        if (!PAGE_TYPES.includes(g['@type'])) continue;
+        g.inLanguage = L.lang;
+        if (page.path) { g.url = SITE + pathFor(L.code, page.path); g['@id'] = `${g.url}#webpage`; }
+      }
       s.set_content(JSON.stringify(data));
     }
     decorate(root, L.code, page); // menu first: the page then has the same structure the English source was extracted from
