@@ -38,8 +38,10 @@ const MENU_CSS = `<style id="orvum-lang-css">
 .lang li a[aria-current="true"] { color: #ff9a5c; }
 .pnav-links .lang { margin-inline-start: 6px; }
 @media (max-width: 760px) { .pnav-links .lang ul { position: static; margin-top: 6px; box-shadow: none; } }
-.hero-lang { position: fixed; top: 26px; inset-inline-start: 26px; z-index: 30; color: #ece6de; }
-@media (max-width: 1099px) { .hero-lang { top: 18px; inset-inline-start: 16px; } }
+html:not([dir="rtl"]) .lang li a { text-align: left; } html[dir="rtl"] .lang li a { text-align: right; }
+.hero-lang ul { inset-inline-end: auto; inset-inline-start: auto; left: 0; right: auto; max-height: calc(100vh - 90px); overflow-y: auto; }
+.hero-lang { position: fixed; top: 26px; left: 26px; right: auto; z-index: 30; color: #ece6de; }
+@media (max-width: 1099px) { .hero-lang { top: 18px; left: 16px; right: auto; } }
 </style>`;
 function menu(code, p, cls = '', top = false) {
   const cur = ALL.find((l) => l.code === code);
