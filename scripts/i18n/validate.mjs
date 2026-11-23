@@ -18,7 +18,7 @@ function figures(s) {
   }
   return out.sort().join(',');
 }
-const LATIN_OK = /\b(?:ORVUM|OTB|RTW|POS|mPOS|CRM|AI|VIP|P&L|P&amp;L|ROI|NDA|EU|Delivery Match|LinkedIn|Instagram|truth@orvum\.com|orvum\.com|linkedin\.com\/company\/orvum|clienteling|sell-through|Shipment|Lot|XS|M|L|A1|B|C|ex-VAT|VAT|PDF|GDPR|ready-to-wear|shop-in-shop|e-mail|E-mail|email|Email|Clienteling|Ilya Loshak|open-to-buy|Open-to-buy|showroom|Showroom|denim|brands|brand)(?![A-Za-z0-9])/g;
+const LATIN_OK = /\b(?:ORVUM|OTB|RTW|POS|mPOS|CRM|AI|VIP|P&L|P&amp;L|ROI|NDA|EU|Delivery Match|LinkedIn|Instagram|truth@orvum\.com|orvum\.com|linkedin\.com\/company\/orvum|clienteling|sell-through|Shipment|Lot|XS|M|L|A1|B|C|ex-VAT|VAT|PDF|GDPR|ready-to-wear|shop-in-shop|e-mail|E-mail|email|Email|Clienteling|Ilya Loshak|open-to-buy|Open-to-buy|showroom|Showroom|denim|brands|brand|Excel|briefing|looks|Sell-through)(?![A-Za-z0-9])/g;
 let problems = 0;
 for (const code of codes) {
   const f = `i18n/${code}.json`;
